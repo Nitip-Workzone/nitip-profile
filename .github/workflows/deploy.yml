@@ -1,0 +1,29 @@
+name: Deploy to VPS (Self-Hosted)
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: nitip-prod
+    
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Build New Docker Image
+        run: |
+          # Build ulang image dengan tag latest (menarik source code terbaru)
+          docker compose build app
+
+      - name: Restart Container
+        run: |
+          # Restart container dengan image terbaru
+          docker compose up -d
+          
+      - name: Cleanup Old Images
+        run: |
+          # Menghapus sisa image lama agar disk VPS tidak cepat penuh
+          docker image prune -f
