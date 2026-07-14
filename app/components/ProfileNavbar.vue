@@ -33,7 +33,10 @@ const navLinks = [
           >
             {{ link.label }}
           </NuxtLink>
-          <a href="#download" class="btn-primary text-sm py-2">Download App</a>
+          <span class="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-semibold text-primary-600 bg-primary-50 rounded-full">
+            <span class="w-1.5 h-1.5 bg-accent rounded-full animate-pulse" />
+            Segera Hadir
+          </span>
         </div>
 
         <!-- Mobile Menu Button -->
@@ -70,7 +73,10 @@ const navLinks = [
             >
               {{ link.label }}
             </NuxtLink>
-            <a href="#download" class="btn-primary text-sm mt-2" @click="isMenuOpen = false">Download App</a>
+            <span class="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-semibold text-primary-600 bg-primary-50 rounded-full mt-2 justify-center">
+              <span class="w-1.5 h-1.5 bg-accent rounded-full animate-pulse" />
+              Segera Hadir
+            </span>
           </div>
         </div>
       </Transition>

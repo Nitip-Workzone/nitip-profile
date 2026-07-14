@@ -28,15 +28,10 @@
 
         <!-- CTA Buttons -->
         <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-          <a
-            href="#download"
-            class="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-primary-700 bg-white hover:bg-gray-50 rounded-2xl shadow-xl shadow-black/10 transition-all duration-200 hover:shadow-2xl"
-          >
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-            </svg>
-            Download Aplikasi
-          </a>
+          <div class="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
+            <span class="w-2.5 h-2.5 bg-accent rounded-full animate-pulse" />
+            Segera Hadir di Mobile
+          </div>
           <NuxtLink
             to="/cara-kerja"
             class="inline-flex items-center justify-center gap-2 px-8 py-4 text-base font-semibold text-white bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-2xl border border-white/20 transition-all duration-200"

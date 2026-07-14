@@ -92,7 +92,7 @@ useHead({
             <h3 class="text-xl font-bold text-gray-900">Irwandi Paputungan</h3>
             <p class="text-primary-600 font-semibold text-sm mt-1">Founder & Lead Developer</p>
             <p class="text-gray-500 text-sm mt-3 leading-relaxed">
-              Software Engineer asal Lolak, Kabupaten Bolaang Mongondow. Berpengalaman sebagai Backend Developer di Bank Raya Indonesia dan Software Engineer di KiriminAja. Lulusan Teknik Informatika STMIK Adhi Guna Palu.
+              Software Engineer asal Lolak, Kabupaten Bolaang Mongondow. Fullstack Developer yang passionate membangun solusi teknologi untuk masyarakat lokal.
             </p>
 
             <!-- Skills -->
@@ -106,9 +106,12 @@ useHead({
             </div>
 
             <!-- Social Links -->
-            <div class="flex justify-center gap-3 mt-5">
-              <a href="https://linkedin.com/in/irwandi-paputungan-8697ab218" target="_blank" rel="noopener" class="px-4 py-2 bg-blue-50 text-blue-700 text-xs font-semibold rounded-lg hover:bg-blue-100 transition-colors">
+            <div class="flex flex-wrap justify-center gap-3 mt-5">
+              <a href="https://id.linkedin.com/in/irwandi-paputungan-8697ab218" target="_blank" rel="noopener" class="px-4 py-2 bg-blue-50 text-blue-700 text-xs font-semibold rounded-lg hover:bg-blue-100 transition-colors">
                 LinkedIn
+              </a>
+              <a href="https://www.facebook.com/irwandi.new/" target="_blank" rel="noopener" class="px-4 py-2 bg-blue-600 text-white text-xs font-semibold rounded-lg hover:bg-blue-700 transition-colors">
+                Facebook
               </a>
               <a href="https://github.com/IPKIN9" target="_blank" rel="noopener" class="px-4 py-2 bg-gray-800 text-white text-xs font-semibold rounded-lg hover:bg-gray-900 transition-colors">
                 GitHub
