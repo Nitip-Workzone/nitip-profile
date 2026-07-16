@@ -15,11 +15,9 @@ const navLinks = [
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-16">
         <!-- Logo -->
-        <NuxtLink to="/" class="flex items-center gap-2" aria-label="Nitip Beranda">
-          <div class="w-8 h-8 bg-primary-500 rounded-lg flex items-center justify-center">
-            <span class="text-white font-bold text-sm">N</span>
-          </div>
-          <span class="text-xl font-bold text-primary-500">Nitip</span>
+        <NuxtLink to="/" class="flex items-center gap-2" aria-label="Nihtip Beranda">
+          <img src="/logo.webp" alt="Nihtip Logo" class="h-9 w-auto" />
+          <span class="text-xl font-bold text-primary-500">Nihtip</span>
         </NuxtLink>
 
         <!-- Desktop Nav -->
@@ -34,8 +32,7 @@ const navLinks = [
             {{ link.label }}
           </NuxtLink>
           <span class="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-semibold text-primary-600 bg-primary-50 rounded-full">
-            <span class="w-1.5 h-1.5 bg-accent rounded-full animate-pulse" />
-            Segera Hadir
+            📍 Dari Bolaang Mongondow
           </span>
         </div>
 
@@ -74,8 +71,7 @@ const navLinks = [
               {{ link.label }}
             </NuxtLink>
             <span class="inline-flex items-center gap-1.5 px-4 py-2 text-sm font-semibold text-primary-600 bg-primary-50 rounded-full mt-2 justify-center">
-              <span class="w-1.5 h-1.5 bg-accent rounded-full animate-pulse" />
-              Segera Hadir
+              📍 Dari Bolaang Mongondow
             </span>
           </div>
         </div>

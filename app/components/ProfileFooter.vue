@@ -5,13 +5,13 @@
         <!-- Brand -->
         <div class="md:col-span-1 space-y-4">
           <div class="flex items-center gap-2">
-            <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
-              <span class="text-primary-500 font-bold text-sm">N</span>
+            <div class="w-10 h-10 bg-white rounded-lg flex items-center justify-center p-1.5">
+              <img src="/logo.webp" alt="Nihtip Logo" class="h-full w-auto" />
             </div>
-            <span class="text-xl font-bold text-white">Nitip</span>
+            <span class="text-xl font-bold text-white">Nihtip</span>
           </div>
           <p class="text-sm leading-relaxed">
-            Platform UMKM Jasa Titip pertama dari Kabupaten Bolaang Mongondow, Sulawesi Utara. Menghubungkan Penitip dan Runner untuk pengiriman barang yang lebih mudah, aman, dan terjangkau.
+            Lahir dari Bolaang Mongondow untuk memudahkan masyarakat mendapatkan kebutuhan sehari-hari tanpa harus melakukan perjalanan yang tidak perlu.
           </p>
         </div>
 
@@ -53,7 +53,7 @@
 
       <!-- Copyright -->
       <div class="border-t border-gray-800 mt-12 pt-8 text-center text-sm">
-        <p>&copy; {{ new Date().getFullYear() }} Nitip. Hak cipta dilindungi undang-undang.</p>
+        <p>&copy; {{ new Date().getFullYear() }} Nihtip. Hak cipta dilindungi undang-undang.</p>
       </div>
     </div>
   </footer>

@@ -1,19 +1,19 @@
 <script setup lang="ts">
 useHead({
-  title: 'Nitip - Kirim & Titip Barang Lebih Mudah',
+  title: 'Nitip - Tidak Perlu ke Kota Hanya untuk Satu Barang',
   meta: [
     {
       name: 'description',
-      content: 'Nitip menghubungkan Penitip dan Runner untuk pengiriman barang yang lebih mudah, aman dengan sistem escrow, dan real-time tracking.',
+      content: 'Nitip menghubungkan kebutuhanmu dengan Runner terpercaya yang memang sedang dalam perjalanan. Lebih hemat waktu, lebih aman, tanpa merepotkan teman.',
     },
   ],
 })
 
 useSeoMeta({
-  title: 'Nitip - Kirim & Titip Barang Lebih Mudah',
-  description: 'Nitip menghubungkan Penitip dan Runner untuk pengiriman barang yang lebih mudah, aman dengan sistem escrow, dan real-time tracking.',
-  ogTitle: 'Nitip - Kirim & Titip Barang Lebih Mudah',
-  ogDescription: 'Platform Jasa Titip yang menghubungkan Penitip dan Runner. Kirim barang lebih mudah, aman, dan terjangkau.',
+  title: 'Nitip - Tidak Perlu ke Kota Hanya untuk Satu Barang',
+  description: 'Nitip menghubungkan kebutuhanmu dengan Runner terpercaya yang memang sedang dalam perjalanan. Lebih hemat waktu, lebih aman, tanpa merepotkan teman.',
+  ogTitle: 'Nitip - Tidak Perlu ke Kota Hanya untuk Satu Barang',
+  ogDescription: 'Nitip menghubungkan kebutuhanmu dengan Runner terpercaya yang memang sedang dalam perjalanan.',
   ogType: 'website',
 })
 </script>
@@ -21,8 +21,9 @@ useSeoMeta({
 <template>
   <div>
     <ProfileHero />
+    <ProfileProblems />
+    <ProfileFounderStory />
     <ProfileFeatures />
-    <ProfileHowItWorks />
     <ProfileDownload />
   </div>
 </template>

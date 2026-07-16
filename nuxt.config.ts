@@ -12,7 +12,7 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: 'id' },
-      title: 'Nitip - Kirim & Titip Barang Lebih Mudah',
+      title: 'Nihtip - Kirim & Titip Barang Lebih Mudah',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -23,18 +23,18 @@ export default defineNuxtConfig({
         },
         // Open Graph
         { property: 'og:type', content: 'website' },
-        { property: 'og:title', content: 'Nitip - Kirim & Titip Barang Lebih Mudah' },
+        { property: 'og:title', content: 'Nihtip - Kirim & Titip Barang Lebih Mudah' },
         {
           property: 'og:description',
           content:
             'Platform Jasa Titip yang menghubungkan Penitip dan Runner. Kirim barang lebih mudah, aman, dan terjangkau.',
         },
         { property: 'og:image', content: '/og-image.png' },
-        { property: 'og:site_name', content: 'Nitip' },
+        { property: 'og:site_name', content: 'Nihtip' },
         { property: 'og:locale', content: 'id_ID' },
         // Twitter Card
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: 'Nitip - Kirim & Titip Barang Lebih Mudah' },
+        { name: 'twitter:title', content: 'Nihtip - Kirim & Titip Barang Lebih Mudah' },
         {
           name: 'twitter:description',
           content:
@@ -42,7 +42,7 @@ export default defineNuxtConfig({
         },
         { name: 'twitter:image', content: '/og-image.png' },
         // Theme
-        { name: 'theme-color', content: '#1E3A5F' },
+        { name: 'theme-color', content: '#0062cc' },
       ],
       link: [
         { rel: 'icon', type: 'image/png', href: '/favicon.png' },
@@ -60,9 +60,9 @@ export default defineNuxtConfig({
           innerHTML: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Organization',
-            name: 'Nitip',
+            name: 'Nihtip',
             url: 'https://nitip.id',
-            logo: 'https://nitip.id/nitip-logo.png',
+            logo: 'https://nitip.id/logo.webp',
             description:
               'Platform Jasa Titip yang menghubungkan Penitip dan Runner untuk pengiriman barang yang lebih mudah dan aman.',
             sameAs: [

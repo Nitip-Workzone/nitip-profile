@@ -1,34 +1,19 @@
 <script setup lang="ts">
-const features = [
+const pillars = [
   {
-    icon: '🛡️',
-    title: 'Sistem Escrow',
-    description: 'Dana Anda aman. Uang ditahan sampai pesanan selesai, sehingga kedua belah pihak terlindungi.',
+    icon: '🔒',
+    title: 'Dana ditahan hingga barang diterima.',
+    description: 'Uang Anda tidak langsung ke Runner. Sistem kami menahan dana sampai barang sampai di tangan Anda dengan aman.',
   },
   {
-    icon: '🎯',
-    title: 'Smart Matching',
-    description: 'Algoritma pintar mencocokkan pesanan dengan Runner yang searah, sehingga lebih cepat dan efisien.',
+    icon: '🪪',
+    title: 'Runner memiliki identitas yang jelas.',
+    description: 'Setiap Runner yang bergabung wajib menyerahkan identitas. Anda tahu siapa yang membawa barang Anda.',
   },
   {
-    icon: '📍',
-    title: 'Real-Time Tracking',
-    description: 'Pantau posisi Runner secara langsung di peta. Tahu persis kapan barang Anda tiba.',
-  },
-  {
-    icon: '💰',
-    title: 'Harga Terjangkau',
-    description: 'Biaya pengiriman dihitung otomatis berdasarkan jarak dan berat. Transparan, tanpa biaya tersembunyi.',
-  },
-  {
-    icon: '⚡',
-    title: 'Proses Cepat',
-    description: 'Buat pesanan dalam hitungan detik. Runner terdekat langsung mendapat notifikasi untuk mengambil pesanan Anda.',
-  },
-  {
-    icon: '🤝',
-    title: 'Runner Terverifikasi',
-    description: 'Semua Runner melalui proses verifikasi KYC untuk menjamin keamanan dan kepercayaan.',
+    icon: '👁️',
+    title: 'Lebih transparan dari jastip manual.',
+    description: 'Harga, ongkir, dan status pesanan bisa dipantau langsung. Tidak ada biaya tersembunyi atau tanda tanya.',
   },
 ]
 </script>
@@ -37,24 +22,24 @@ const features = [
   <section class="py-20 bg-white">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-center mb-16">
-        <h2 class="section-title">Fitur Unggulan</h2>
+        <h2 class="section-title">Keamanan yang bisa Anda rasakan.</h2>
         <p class="section-subtitle mx-auto">
-          Nikmati kemudahan pengiriman barang dengan fitur-fitur yang dirancang untuk keamanan dan kenyamanan Anda.
+          Bukan sekadar janji — ini cara kerja kami.
         </p>
       </div>
 
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
         <article
-          v-for="feature in features"
-          :key="feature.title"
-          class="group p-6 rounded-2xl border border-gray-100 hover:border-primary-100 hover:shadow-lg hover:shadow-primary-500/5 transition-all duration-300"
+          v-for="pillar in pillars"
+          :key="pillar.title"
+          class="text-center p-8 rounded-2xl bg-gray-50 border border-gray-100"
         >
-          <div class="text-4xl mb-4">{{ feature.icon }}</div>
-          <h3 class="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary-500 transition-colors">
-            {{ feature.title }}
+          <div class="text-4xl mb-5">{{ pillar.icon }}</div>
+          <h3 class="text-lg font-bold text-gray-900 mb-3">
+            {{ pillar.title }}
           </h3>
           <p class="text-sm text-gray-500 leading-relaxed">
-            {{ feature.description }}
+            {{ pillar.description }}
           </p>
         </article>
       </div>
