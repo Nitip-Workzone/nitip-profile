@@ -1,4 +1,47 @@
 node_modules
 .nuxt
 .output
+.data
+.nitro
+.cache
+dist
 json.lock
+logs
+*.log
+.DS_Store
+.idea
+.vscode/
+
+# ===============================
+# ENV & SECRETS - JANGAN COMMIT!
+# ===============================
+.env
+.env.*
+!.env.example
+**/.env
+**/env.json
+
+# Firebase - JANGAN COMMIT!
+**/*firebase-adminsdk*.json
+**/*service-account*.json
+**/google-services.json
+firebase-credentials.json
+**/firebase-credentials.json
+**/GoogleService-Info.plist
+
+# Secrets
+*.pem
+*.key
+*.jks
+*.keystore
+*.p12
+secret.txt
+**/secret.txt
+credentials.json
+**/credentials.json
+**/key.properties
+
+# User data
+user_data/
+screenshots/
+chrome_profile_*/
