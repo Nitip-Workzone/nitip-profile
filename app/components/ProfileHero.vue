@@ -16,8 +16,8 @@
 
           <div class="space-y-4">
             <h1 class="font-extrabold tracking-[-0.04em] leading-[0.92] text-[#0f172a] text-[38px] sm:text-[48px] lg:text-[56px]">
-              <span class="block">Titip apa saja,</span>
-              <span class="block text-[#5b50e6] mt-1">jadi mudah.</span>
+              <span class="block">Tidak perlu ke kota</span>
+              <span class="block text-[#5b50e6] mt-1">hanya untuk satu barang.</span>
             </h1>
             <p class="text-[13.5px] sm:text-[14px] leading-[1.65] text-[#64748b] max-w-[460px] font-medium">
               Nihtip adalah platform jastip terpercaya untuk belanja, antar barang, antri, titip dokumen, dan banyak lagi. Aman, cepat, dan transparan.
@@ -25,11 +25,11 @@
           </div>
 
           <div class="flex flex-wrap items-center gap-3 pt-1">
-            <a href="#" class="inline-flex items-center justify-center gap-2 h-[44px] px-6 rounded-[12px] bg-[#5b50e6] hover:bg-[#4f47d1] text-white text-[14px] font-semibold shadow-[0_6px_16px_rgba(91,80,230,0.28)] transition-all active:scale-[0.98]">
-              <span>Titip Sekarang</span>
+            <a href="https://wa.me/628810880293990" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 h-[44px] px-6 rounded-[12px] bg-[#5b50e6] hover:bg-[#4f47d1] text-white text-[14px] font-semibold shadow-[0_6px_16px_rgba(91,80,230,0.28)] transition-all active:scale-[0.98]">
+              <span>Nitip Jo</span>
               <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
             </a>
-            <a href="#" class="inline-flex items-center justify-center gap-2 h-[44px] px-5 rounded-[12px] bg-white border border-[#e2e8f0] text-[#334155] text-[14px] font-semibold hover:bg-[#f8fafc] transition active:scale-[0.98]">
+            <a href="https://wa.me/628810880293990" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 h-[44px] px-5 rounded-[12px] bg-white border border-[#e2e8f0] text-[#334155] text-[14px] font-semibold hover:bg-[#f8fafc] transition active:scale-[0.98]">
               <span>Jadi Runner</span>
               <span class="text-[16px] leading-none">🚲</span>
             </a>

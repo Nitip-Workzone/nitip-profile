@@ -22,7 +22,7 @@ const navLinks = [
           </div>
           <div class="leading-[1]">
             <span class="text-[20px] font-extrabold tracking-tight text-gray-900 group-hover:text-[#5b50e6] transition-colors duration-200">nihtip</span>
-            <span class="block text-[10px] text-gray-500 font-medium mt-0.5">Titip apa saja, jadi mudah.</span>
+            <span class="block text-[10px] text-gray-500 font-medium mt-0.5">Tidak perlu ke kota hanya untuk satu barang.</span>
           </div>
         </NuxtLink>
 
@@ -45,18 +45,20 @@ const navLinks = [
 
         <!-- Right Actions -->
         <div class="hidden lg:flex items-center gap-2.5">
-          <NuxtLink
-            to="/#"
+          <a
+            href="https://wa.me/628810880293990"
+            target="_blank" rel="noopener noreferrer"
             class="px-[18px] py-[8px] text-[13px] font-semibold text-gray-700 bg-white border border-gray-200 rounded-[10px] hover:bg-gray-50 transition-colors"
           >
             Masuk
-          </NuxtLink>
-          <NuxtLink
-            to="/#"
+          </a>
+          <a
+            href="https://wa.me/628810880293990"
+            target="_blank" rel="noopener noreferrer"
             class="px-[18px] py-[8px] text-[13px] font-semibold text-white bg-primary-600 rounded-[10px] hover:bg-primary-700 transition-colors shadow-sm shadow-primary-600/20"
           >
             Daftar Gratis
-          </NuxtLink>
+          </a>
         </div>
 
         <!-- Mobile Button -->
@@ -93,8 +95,8 @@ const navLinks = [
               {{ link.label }}
             </NuxtLink>
             <div class="flex gap-2 pt-3">
-              <NuxtLink to="/#" class="flex-1 text-center px-4 py-2.5 text-sm font-semibold border border-gray-200 rounded-xl">Masuk</NuxtLink>
-              <NuxtLink to="/#" class="flex-1 text-center px-4 py-2.5 text-sm font-semibold text-white bg-primary-600 rounded-xl">Daftar Gratis</NuxtLink>
+              <a href="https://wa.me/628810880293990" target="_blank" rel="noopener noreferrer" class="flex-1 text-center px-4 py-2.5 text-sm font-semibold border border-gray-200 rounded-xl">Masuk</a>
+              <a href="https://wa.me/628810880293990" target="_blank" rel="noopener noreferrer" class="flex-1 text-center px-4 py-2.5 text-sm font-semibold text-white bg-primary-600 rounded-xl">Daftar Gratis</a>
             </div>
           </div>
         </div>
