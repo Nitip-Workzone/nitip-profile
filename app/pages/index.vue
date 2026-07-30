@@ -1,6 +1,6 @@
 <script setup lang="ts">
 useHead({
-  title: 'Nitip - Tidak Perlu ke Kota Hanya untuk Satu Barang',
+  title: 'Nihtip - Kirim & Titip Barang Lebih Mudah',
   meta: [
     {
       name: 'description',
@@ -10,17 +10,18 @@ useHead({
 })
 
 useSeoMeta({
-  title: 'Nitip - Tidak Perlu ke Kota Hanya untuk Satu Barang',
+  title: 'Nihtip - Kirim & Titip Barang Lebih Mudah',
   description: 'Nitip menghubungkan kebutuhanmu dengan Runner terpercaya yang memang sedang dalam perjalanan. Lebih hemat waktu, lebih aman, tanpa merepotkan teman.',
-  ogTitle: 'Nitip - Tidak Perlu ke Kota Hanya untuk Satu Barang',
+  ogTitle: 'Nihtip - Kirim & Titip Barang Lebih Mudah',
   ogDescription: 'Nitip menghubungkan kebutuhanmu dengan Runner terpercaya yang memang sedang dalam perjalanan.',
   ogType: 'website',
 })
 </script>
 
 <template>
-  <div>
+  <div class="space-y-0">
     <ProfileHero />
+    <!-- Services & old HowItWorks hidden — now integrated inside Hero per design ref screenshot 1 -->
     <ProfileProblems />
     <ProfileFounderStory />
     <ProfileFeatures />

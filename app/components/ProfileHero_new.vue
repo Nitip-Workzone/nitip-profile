@@ -67,46 +67,133 @@
           </div>
         </div>
 
-        <!-- RIGHT - PHONES -->
-        <div class="relative order-2 flex justify-center lg:justify-end items-end select-none mt-4 lg:mt-0 w-full pb-2 lg:pb-0 h-[360px] sm:h-[440px] lg:h-[520px]">
-          <!-- Purple Background Blob -->
-          <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] sm:w-[500px] sm:h-[500px] lg:w-[600px] lg:h-[600px] bg-[#f5f3ff] rounded-full blur-3xl -z-10"></div>
+        <!-- RIGHT - PHONES - pixel perfect to ref -->
+        <div class="relative order-2 lg:order-2 flex justify-center lg:justify-end items-center select-none mt-2 lg:mt-0">
+          <!-- Purple blob -->
+          <div class="absolute left-1/2 lg:left-auto lg:right-[-12px] top-1/2 -translate-x-1/2 lg:translate-x-0 -translate-y-1/2 w-[340px] h-[340px] sm:w-[520px] sm:h-[520px] lg:w-[560px] lg:h-[560px] bg-[#ede9ff] rounded-full -z-10"></div>
 
-          <!-- Phones Wrapper -->
-          <div class="absolute top-0 left-0 right-0 bottom-[30px] sm:bottom-[40px] lg:bottom-[50px] overflow-hidden pointer-events-none z-10">
-            <!-- Phones row -->
-            <div class="absolute top-[40px] sm:top-[60px] lg:top-[100px] flex flex-row items-start justify-center gap-0 w-full max-w-[360px] sm:max-w-[480px] lg:max-w-[620px] left-1/2 -translate-x-1/2 lg:left-auto lg:translate-x-0 lg:right-0 pointer-events-auto">
-              <!-- Left Phone -->
-            <div class="relative w-[48%] sm:w-[47%] lg:w-[47%] -rotate-[7deg] lg:-rotate-[9deg] translate-y-3 sm:translate-y-6 lg:translate-y-8 z-10 translate-x-3 sm:translate-x-5 lg:translate-x-6 shrink-0">
-              <div class="rounded-[24px] sm:rounded-[28px] lg:rounded-[36px] overflow-hidden bg-transparent">
-                <img
-                  src="/images/mock1.png"
-                  alt="Andi Mode Penitip Rp0"
-                  class="w-full h-auto object-contain bg-transparent block drop-shadow-[0_12px_28px_rgba(0,0,0,0.12)]"
-                  loading="eager"
-                />
+          <div class="relative flex items-end justify-center gap-0 w-full max-w-[360px] sm:max-w-[480px] lg:max-w-[560px] mx-auto lg:mx-0">
+            <!-- Left Phone: Andi Rp0 -->
+            <div class="relative w-[46%] sm:w-[48%] -rotate-[8deg] translate-y-4 z-10 translate-x-5 sm:translate-x-6">
+              <div class="rounded-[36px] bg-[#0a0a0a] p-[7px] shadow-[0_24px_60px_-16px_rgba(0,0,0,0.45),0_10px_20px_-8px_rgba(0,0,0,0.25)]">
+                <div class="rounded-[30px] bg-white overflow-hidden h-[400px] sm:h-[500px] lg:h-[520px] flex flex-col relative">
+                  <!-- Dynamic Island -->
+                  <div class="absolute top-[8px] left-1/2 -translate-x-1/2 w-[74px] h-[20px] bg-black rounded-full z-30"></div>
+                  <div class="h-[28px]"></div>
+                  <div class="px-[16px] flex-1 flex flex-col gap-[14px] overflow-hidden">
+                    <!-- Header -->
+                    <div class="flex justify-between items-start">
+                      <div class="space-y-[5px]">
+                        <p class="text-[15px] font-extrabold tracking-tight text-[#101828] leading-none">Halo, andi! <span class="text-[13px]">👋</span></p>
+                        <div class="inline-flex px-[8px] py-[3px] rounded-[8px] bg-[#e0e7ff] border border-[#c7d2fe]">
+                          <span class="text-[8px] font-extrabold tracking-[0.08em] text-[#4338ca]">MODE PENITIP</span>
+                        </div>
+                      </div>
+                      <div class="w-[26px] h-[26px] rounded-full bg-[#f5f3ff] border border-[#e9e5ff] flex items-center justify-center">
+                        <svg class="w-3.5 h-3.5 text-[#6d63f1]" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6 6 0 10-12 0v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+                      </div>
+                    </div>
+
+                    <!-- Wallet Card Rp0 -->
+                    <div class="rounded-[20px] bg-[#5b50e6] p-[14px] text-white shadow-[0_8px_20px_rgba(91,80,230,0.35)]">
+                      <div class="flex justify-between items-center">
+                        <div class="flex items-center gap-[6px]">
+                          <div class="w-[18px] h-[18px] rounded-[6px] bg-white/20 flex items-center justify-center">
+                            <svg class="w-[10px] h-[10px] text-white" viewBox="0 0 24 24" fill="currentColor"><path d="M2 7c0-1.1.9-2 2-2h12a2 2 0 012 2v10a2 2 0 01-2 2H4a2 2 0 01-2-2V7zm4 1a2 2 0 100 4 2 2 0 000-4zm10 0h-4v4h4V8z"/></svg>
+                          </div>
+                          <span class="text-[9px] font-bold tracking-wide">NITIP PAY</span>
+                        </div>
+                        <div class="flex items-center gap-1 bg-white/15 rounded-full pl-1.5 pr-2 py-1">
+                          <span class="text-[9px]">👁️</span>
+                          <span class="text-[8px] font-medium">Sembunyikan</span>
+                        </div>
+                      </div>
+                      <p class="text-[8px] font-medium tracking-[0.08em] opacity-70 mt-[12px]">SALDO TERSEDIA</p>
+                      <p class="text-[22px] font-extrabold leading-none mt-[3px] tracking-tight">Rp0</p>
+                      <div class="flex items-center gap-3 mt-[14px]">
+                        <div class="text-center"><div class="w-[32px] h-[32px] rounded-[10px] bg-white/20 flex items-center justify-center text-[16px] font-bold">+</div><p class="text-[8px] mt-1 font-medium">Top Up</p></div>
+                        <div class="text-center"><div class="w-[32px] h-[32px] rounded-[10px] bg-white/20 flex items-center justify-center"><span class="text-[14px]">💳</span></div><p class="text-[8px] mt-1 font-medium">Tarik</p></div>
+                        <div class="text-center"><div class="w-[32px] h-[32px] rounded-[10px] bg-white/20 flex items-center justify-center"><span class="text-[12px]">↻</span></div><p class="text-[8px] mt-1 font-medium">Riwayat</p></div>
+                      </div>
+                    </div>
+
+                    <!-- Layanan -->
+                    <div class="space-y-2.5">
+                      <p class="text-[10px] font-extrabold tracking-[0.12em] text-[#94a3b8]">LAYANAN</p>
+                      <div class="grid grid-cols-5 gap-2">
+                        <div class="flex flex-col items-center gap-1.5"><div class="w-[42px] h-[42px] rounded-[12px] bg-white border border-[#f1f5f9] shadow-sm flex items-center justify-center text-[18px]">🍜</div><span class="text-[8px] font-semibold text-[#334155] text-center leading-[1.1]">Nitip Food</span></div>
+                        <div class="flex flex-col items-center gap-1.5"><div class="w-[42px] h-[42px] rounded-[12px] bg-white border border-[#f1f5f9] shadow-sm flex items-center justify-center text-[16px]">🛍️</div><span class="text-[8px] font-semibold text-[#334155]">Titip Beli</span></div>
+                        <div class="flex flex-col items-center gap-1.5"><div class="w-[42px] h-[42px] rounded-[12px] bg-white border border-[#f1f5f9] shadow-sm flex items-center justify-center text-[16px]">📦</div><span class="text-[8px] font-semibold text-[#334155]">Kirim Paket</span></div>
+                        <div class="flex flex-col items-center gap-1.5"><div class="w-[42px] h-[42px] rounded-[12px] bg-white border border-[#f1f5f9] shadow-sm flex items-center justify-center text-[16px]">🏃‍♂️</div><span class="text-[8px] font-semibold text-[#334155]">Cari Runner</span></div>
+                        <div class="flex flex-col items-center gap-1.5"><div class="w-[42px] h-[42px] rounded-[12px] bg-white border border-[#f1f5f9] shadow-sm flex items-center justify-center text-[16px]">🛒</div><span class="text-[8px] font-semibold text-[#334155] text-center leading-[1.1]">Order Saya</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <!-- Right Phone -->
-            <div class="relative w-[52%] sm:w-[51%] lg:w-[51%] rotate-[5deg] lg:rotate-[7deg] z-20 -translate-x-2 sm:-translate-x-3 lg:-translate-x-4 shrink-0">
-              <div class="rounded-[24px] sm:rounded-[28px] lg:rounded-[36px] overflow-hidden bg-transparent">
-                <img
-                  src="/images/mock2.png"
-                  alt="Budi Runner Rp 50.000"
-                  class="w-full h-auto object-contain bg-transparent block drop-shadow-[0_14px_32px_rgba(0,0,0,0.16)]"
-                  loading="eager"
-                />
+            <!-- Right Phone: Budi Rp 50.000 - foreground -->
+            <div class="relative w-[48%] sm:w-[50%] rotate-[6deg] z-20 -translate-x-4 sm:-translate-x-5">
+              <div class="rounded-[36px] bg-[#0a0a0a] p-[7px] shadow-[0_24px_60px_-16px_rgba(0,0,0,0.45),0_10px_20px_-8px_rgba(0,0,0,0.25)]">
+                <div class="rounded-[30px] bg-white overflow-hidden h-[420px] sm:h-[530px] lg:h-[560px] flex flex-col relative">
+                  <div class="absolute top-[8px] left-1/2 -translate-x-1/2 w-[74px] h-[20px] bg-black rounded-full z-30"></div>
+                  <div class="h-[28px]"></div>
+                  <div class="px-[16px] flex-1 flex flex-col gap-[12px] overflow-hidden">
+                    <!-- Header runner -->
+                    <div class="flex justify-between items-start">
+                      <div class="space-y-[3px]">
+                        <p class="text-[14px] sm:text-[15px] font-extrabold tracking-tight text-[#101828] leading-none">Halo, budi runner! <span class="text-[12px]">👋</span></p>
+                        <p class="text-[9px] text-[#64748b] flex items-center gap-1">Mode Runner <span class="inline-flex w-[13px] h-[13px] rounded-full bg-[#5b50e6] text-white items-center justify-center text-[8px]">✔</span></p>
+                      </div>
+                      <div class="w-[26px] h-[26px] rounded-full bg-[#f5f3ff] border border-[#e9e5ff] flex items-center justify-center">
+                        <svg class="w-3.5 h-3.5 text-[#6d63f1]" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6 6 0 10-12 0v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"/></svg>
+                      </div>
+                    </div>
+
+                    <div class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full border border-[#e0e7ff] bg-white w-fit shadow-sm">
+                      <span class="w-[14px] h-[14px] rounded-full bg-[#ede9fe] flex items-center justify-center text-[10px]">⏻</span>
+                      <span class="text-[9px] font-bold text-[#4338ca]">Online</span>
+                      <span class="w-[5px] h-[5px] bg-[#22c55e] rounded-full animate-pulse"></span>
+                    </div>
+
+                    <!-- Runner Wallet Rp 50.000 -->
+                    <div class="rounded-[20px] bg-[#5b50e6] p-[14px] text-white shadow-[0_8px_20px_rgba(91,80,230,0.35)]">
+                      <div class="flex justify-between items-center">
+                        <p class="text-[10px] font-medium opacity-90">Runner Wallet</p>
+                        <div class="flex items-center gap-1 bg-white/15 rounded-full pl-1.5 pr-2 py-1">
+                          <span class="text-[9px]">👁️</span>
+                          <span class="text-[8px] font-medium">Sembunyikan</span>
+                        </div>
+                      </div>
+                      <p class="text-[20px] font-extrabold leading-none mt-[10px] tracking-tight">Rp 50.000</p>
+                      <div class="flex items-center gap-3 mt-[14px]">
+                        <div class="text-center"><div class="w-[34px] h-[34px] rounded-[11px] bg-white/20 flex items-center justify-center text-[16px] font-bold">+</div><p class="text-[8px] mt-1 font-medium">Top Up</p></div>
+                        <div class="text-center"><div class="w-[34px] h-[34px] rounded-[11px] bg-white/20 flex items-center justify-center"><span class="text-[14px]">💳</span></div><p class="text-[8px] mt-1 font-medium">Tarik</p></div>
+                        <div class="text-center"><div class="w-[34px] h-[34px] rounded-[11px] bg-white/20 flex items-center justify-center"><span class="text-[12px]">↻</span></div><p class="text-[8px] mt-1 font-medium">Riwayat</p></div>
+                      </div>
+                    </div>
+
+                    <!-- Aksi Cepat -->
+                    <div class="space-y-2.5">
+                      <p class="text-[11px] font-extrabold tracking-wide text-[#101828]">AKSI CEPAT</p>
+                      <div class="grid grid-cols-3 gap-2">
+                        <div class="flex flex-col items-center gap-1.5"><div class="w-[44px] h-[44px] rounded-[14px] bg-[#f5f3ff] border border-[#ede9fe] flex items-center justify-center text-[#5b50e6]"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg></div><span class="text-[8px] font-semibold text-[#334155] text-center">Cari Order</span></div>
+                        <div class="flex flex-col items-center gap-1.5"><div class="w-[44px] h-[44px] rounded-[14px] bg-[#f5f3ff] border border-[#ede9fe] flex items-center justify-center text-[#5b50e6]"><svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6z"/><path d="M14 2v6h6" fill="none" stroke="white" stroke-width="1.5"/><path d="M10 13a1 1 0 100 2 1 1 0 000-2z" fill="white"/></svg></div><span class="text-[8px] font-semibold text-[#334155] text-center">Riwayat Saldo</span></div>
+                        <div class="flex flex-col items-center gap-1.5"><div class="w-[44px] h-[44px] rounded-[14px] bg-[#f5f3ff] border border-[#ede9fe] flex items-center justify-center text-[#5b50e6]"><svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="1.8" viewBox="0 0 24 24"><path d="M12 8c-1.5 0-2.5 1-2.5 2.5S10.5 13 12 13s2.5 1 2.5 2.5S13.5 18 12 18M12 8v-1m0 11v-1M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg></div><span class="text-[8px] font-semibold text-[#334155] text-center">Tarik Saldo</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
 
-      <!-- STATS BAR - clean white, no blob behind, overlaps bottom 1/4 of phones like reference (z-30) -->
-      <div class="relative z-30 -mt-12 sm:-mt-16 lg:-mt-[100px]">
-        <div class="bg-white rounded-[18px] sm:rounded-[20px] border border-[#f1f5f9] shadow-[0_16px_40px_rgba(15,23,42,0.08),0_2px_8px_rgba(0,0,0,0.04)] px-4 sm:px-6 lg:px-8 py-4 sm:py-4 grid grid-cols-2 sm:flex sm:flex-row items-center justify-between gap-4">
+      <!-- STATS BAR - exact like ref -->
+      <div class="mt-8 sm:mt-6 lg:mt-2">
+        <div class="bg-white rounded-[18px] sm:rounded-[16px] border border-[#f1f5f9] shadow-[0_12px_32px_rgba(15,23,42,0.06),0_1px_3px_rgba(0,0,0,0.04)] px-4 sm:px-6 lg:px-8 py-4 sm:py-3.5 grid grid-cols-2 sm:flex sm:flex-row items-center justify-between gap-4">
           <div class="flex items-center gap-2.5">
             <div class="w-9 h-9 rounded-[10px] bg-[#fff1f2] border border-[#ffe4e6] flex items-center justify-center text-[16px]">🛍️</div>
             <div class="leading-tight">
@@ -229,4 +316,3 @@
 <style scoped>
 /* hide scrollbar if needed */
 </style>
-
