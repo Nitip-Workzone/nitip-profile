@@ -7,7 +7,7 @@
       <!-- HERO TOP -->
       <div class="grid grid-cols-1 lg:grid-cols-[1.05fr_1.15fr] gap-8 lg:gap-10 items-center pt-6 lg:pt-10 pb-4">
         <!-- LEFT -->
-        <div class="space-y-6 order-1">
+        <div class="space-y-6 order-1 lg:-translate-y-12">
           <!-- Badge -->
           <div class="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#fffbeb] border border-[#fde68a]/80 text-[11px] font-semibold text-[#92400e] shadow-[0_1px_2px_rgba(0,0,0,0.04)]">
             <span class="text-[12px]">⭐</span>
@@ -73,28 +73,25 @@
           <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] sm:w-[500px] sm:h-[500px] lg:w-[600px] lg:h-[600px] bg-[#f5f3ff] rounded-full blur-3xl -z-10"></div>
 
           <!-- Phones Wrapper -->
-          <div class="absolute top-0 left-0 right-0 bottom-[30px] sm:bottom-[40px] lg:bottom-[50px] overflow-hidden pointer-events-none z-10">
+          <div class="absolute top-[-100px] left-0 right-0 lg:left-[-200px] lg:right-[-200px] bottom-[30px] sm:bottom-[40px] lg:bottom-[50px] overflow-hidden pointer-events-none z-10">
             <!-- Phones row -->
-            <div class="absolute top-[40px] sm:top-[60px] lg:top-[100px] flex flex-row items-start justify-center gap-0 w-full max-w-[360px] sm:max-w-[480px] lg:max-w-[620px] left-1/2 -translate-x-1/2 lg:left-auto lg:translate-x-0 lg:right-0 pointer-events-auto">
+            <div class="absolute bottom-[-90px] sm:bottom-[-120px] lg:bottom-[-210px] left-1/2 -translate-x-1/2 lg:left-[200px] lg:translate-x-0 flex flex-row items-end justify-center gap-0 w-full max-w-[360px] sm:max-w-[480px] lg:max-w-[620px] pointer-events-auto">
               <!-- Left Phone -->
-            <div class="relative w-[48%] sm:w-[47%] lg:w-[47%] -rotate-[7deg] lg:-rotate-[9deg] translate-y-3 sm:translate-y-6 lg:translate-y-8 z-10 translate-x-3 sm:translate-x-5 lg:translate-x-6 shrink-0">
-              <div class="rounded-[24px] sm:rounded-[28px] lg:rounded-[36px] overflow-hidden bg-transparent">
+              <div class="relative w-[48%] sm:w-[47%] lg:w-[47%] -rotate-[7deg] lg:-rotate-[9deg] translate-y-3 sm:translate-y-6 lg:translate-y-8 z-10 translate-x-3 sm:translate-x-5 lg:translate-x-6 shrink-0">
                 <img
                   src="/images/mock1.png"
                   alt="Andi Mode Penitip Rp0"
-                  class="w-full h-auto object-contain bg-transparent block drop-shadow-[0_12px_28px_rgba(0,0,0,0.12)]"
+                  class="w-full h-auto object-contain block mix-blend-multiply"
                   loading="eager"
                 />
               </div>
-            </div>
 
-            <!-- Right Phone -->
-            <div class="relative w-[52%] sm:w-[51%] lg:w-[51%] rotate-[5deg] lg:rotate-[7deg] z-20 -translate-x-2 sm:-translate-x-3 lg:-translate-x-4 shrink-0">
-              <div class="rounded-[24px] sm:rounded-[28px] lg:rounded-[36px] overflow-hidden bg-transparent">
+              <!-- Right Phone -->
+              <div class="relative w-[52%] sm:w-[51%] lg:w-[51%] rotate-[5deg] lg:rotate-[7deg] z-20 -translate-x-2 sm:-translate-x-3 lg:-translate-x-4 shrink-0">
                 <img
                   src="/images/mock2.png"
                   alt="Budi Runner Rp 50.000"
-                  class="w-full h-auto object-contain bg-transparent block drop-shadow-[0_14px_32px_rgba(0,0,0,0.16)]"
+                  class="w-full h-auto object-contain block mix-blend-multiply"
                   loading="eager"
                 />
               </div>
@@ -102,7 +99,6 @@
           </div>
         </div>
       </div>
-    </div>
 
       <!-- STATS BAR - clean white, no blob behind, overlaps bottom 1/4 of phones like reference (z-30) -->
       <div class="relative z-30 -mt-12 sm:-mt-16 lg:-mt-[100px]">
