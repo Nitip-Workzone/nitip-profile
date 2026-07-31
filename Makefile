@@ -4,7 +4,7 @@
 APP_NAME    := nitip-profile
 SHELL       := /bin/bash
 
-.PHONY: help dev build clean docker docker-up docker-down docker-logs
+.PHONY: help dev build lint clean docker docker-up docker-down docker-logs
 
 ## help: Show this help
 help:
@@ -21,6 +21,10 @@ dev:
 ## build: Build for production
 build:
 	npm run build
+
+## lint: Run type checks (vue-tsc)
+lint:
+	npx vue-tsc --noEmit
 
 ## clean: Remove build artefacts
 clean:

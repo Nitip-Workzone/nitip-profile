@@ -25,7 +25,7 @@ function handleSubmit() {
 
 <template>
   <div>
-    <section class="bg-gradient-to-br from-primary-500 to-primary-700 py-20">
+    <section class="bg-gradient-to-br from-primary-500 to-primary-700 pt-28 pb-20">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 class="text-4xl md:text-5xl font-extrabold text-white mb-4">Hubungi Kami</h1>
         <p class="text-lg text-white/80">Punya pertanyaan atau masukan? Kami siap membantu Anda.</p>
@@ -46,7 +46,16 @@ function handleSubmit() {
                   </div>
                   <div>
                     <h3 class="font-semibold text-gray-900">Email</h3>
-                    <p class="text-gray-500">hello@nitip.id</p>
+                    <p class="text-gray-500"><a href="mailto:irwandip999@gmail.com" class="hover:underline">irwandip999@gmail.com</a></p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-4">
+                  <div class="w-10 h-10 rounded-lg bg-primary-50 flex items-center justify-center flex-shrink-0">
+                    <svg class="w-5 h-5 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.94.725l.548 2.2a1 1 0 01-.321.988l-1.305.98a10.582 10.582 0 004.872 4.872l.98-1.305a1 1 0 01.988-.321l2.2.548a1 1 0 01.725.94V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" /></svg>
+                  </div>
+                  <div>
+                    <h3 class="font-semibold text-gray-900">WhatsApp</h3>
+                    <p class="text-gray-500"><a href="https://wa.me/628810880293990" target="_blank" rel="noopener noreferrer" class="hover:underline">+62 881-0880-2939-90</a></p>
                   </div>
                 </div>
                 <div class="flex items-start gap-4">
@@ -55,7 +64,7 @@ function handleSubmit() {
                   </div>
                   <div>
                     <h3 class="font-semibold text-gray-900">Lokasi</h3>
-                    <p class="text-gray-500">Indonesia</p>
+                    <p class="text-gray-500">Lolak, Bolaang Mongondow, Sulawesi Utara, Indonesia</p>
                   </div>
                 </div>
                 <div class="flex items-start gap-4">
@@ -63,8 +72,8 @@ function handleSubmit() {
                     <svg class="w-5 h-5 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" /></svg>
                   </div>
                   <div>
-                    <h3 class="font-semibold text-gray-900">Sosial Media</h3>
-                    <p class="text-gray-500">@nitip.id</p>
+                    <h3 class="font-semibold text-gray-900">Instagram</h3>
+                    <p class="text-gray-500"><a href="https://www.instagram.com/nitip.id" target="_blank" rel="noopener noreferrer" class="hover:underline">@nitip.id</a></p>
                   </div>
                 </div>
               </div>

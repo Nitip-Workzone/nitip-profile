@@ -38,8 +38,8 @@
             <h4 class="text-xs font-bold uppercase tracking-widest text-white">Dukungan</h4>
             <ul class="space-y-2.5 text-sm">
               <li><NuxtLink to="/kontak" class="hover:text-white transition-colors duration-200">Hubungi Kami</NuxtLink></li>
-              <li><a href="#" class="hover:text-white transition-colors duration-200">Kebijakan Privasi</a></li>
-              <li><a href="#" class="hover:text-white transition-colors duration-200">Syarat Ketentuan</a></li>
+              <li><NuxtLink to="/privacy" class="hover:text-white transition-colors duration-200">Kebijakan Privasi</NuxtLink></li>
+              <li><NuxtLink to="/terms" class="hover:text-white transition-colors duration-200">Syarat Ketentuan</NuxtLink></li>
               <li><a href="#" class="hover:text-white transition-colors duration-200">FAQ</a></li>
             </ul>
           </div>
@@ -64,8 +64,8 @@
       <div class="pt-8 text-center text-xs text-gray-500 flex flex-col sm:flex-row items-center justify-between gap-4">
         <p>&copy; {{ new Date().getFullYear() }} Nihtip. Lolak, Bolaang Mongondow. Hak Cipta Dilindungi.</p>
         <p class="flex gap-4">
-          <a href="#" class="hover:text-gray-300 transition-colors">Privacy</a>
-          <a href="#" class="hover:text-gray-300 transition-colors">Terms</a>
+          <NuxtLink to="/privacy" class="hover:text-gray-300 transition-colors">Privacy</NuxtLink>
+          <NuxtLink to="/terms" class="hover:text-gray-300 transition-colors">Terms</NuxtLink>
         </p>
       </div>
 

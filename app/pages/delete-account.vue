@@ -10,7 +10,7 @@ useHead({
 
 <template>
   <div class="bg-white">
-    <section class="bg-gradient-to-br from-red-600 to-orange-600 py-16">
+    <section class="bg-gradient-to-br from-red-600 to-orange-600 pt-28 pb-16">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <h1 class="text-3xl md:text-4xl font-extrabold text-white mb-3">Hapus Akun & Data</h1>
         <p class="text-sm text-white/80">Sesuai Google Play Data Safety requirement + UU PDP No.27/2022 — Proses 7-30 hari — Publisher CN=Nihtip.com</p>
@@ -20,7 +20,7 @@ useHead({
     <section class="py-12">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="bg-slate-900 text-white rounded-xl p-6 mb-8">
-          <h3 class="font-bold mb-2">Package: com.codecoffy.nitip_flutter_mobile — Publisher Verified</h3>
+          <h3 class="font-bold mb-2">Package: com.nihtip.mobile — Publisher Verified</h3>
           <p class="text-sm text-white/70 m-0">Cert SHA-256: 09b0377b2041032a8d099c576bfafd5185a71453bc8a72e4d01dd156537fd9b7 — SHA-1: 1b3c5646ba8ca440e1ebd1603b1ac4b4b0d708cc — DN: CN=Nihtip.com — Build 2026-07-28 arm64 36MB signed v2+v3 — AAB 22MB — Play Internal Track recommended.</p>
         </div>
 
@@ -41,7 +41,7 @@ useHead({
           <div class="border rounded-2xl p-5">
             <div class="text-2xl mb-2">✉️</div>
             <h3 class="font-bold mb-2">Opsi 2: Via Email</h3>
-            <p class="text-sm text-slate-700">Kirim email ke <a href="mailto:support@nihtip.com" class="underline font-bold">support@nihtip.com</a> dengan:</p>
+            <p class="text-sm text-slate-700">Kirim email ke <a href="mailto:irwandip999@gmail.com" class="underline font-bold">irwandip999@gmail.com</a> dengan:</p>
             <ul class="list-disc pl-5 text-sm space-y-1 text-slate-700 mt-2">
               <li>Subjek: <code>Hapus Akun - [email kamu terdaftar]</code></li>
               <li>Isi: Email terdaftar, no HP, alasan (opsional), attach KTP jika akun terverifikasi</li>
@@ -83,7 +83,7 @@ useHead({
         </div>
 
         <div class="mt-10 pt-6 border-t text-xs text-slate-500">
-          <p>Package: com.codecoffy.nitip_flutter_mobile — Publisher CN=Nihtip.com — SHA-256 09b0377b... — Build 2026-07-28 — Docs backup: planning/09_release_security/01_keystore_backup_and_recovery.md — Kontak: support@nihtip.com</p>
+          <p>Package: com.nihtip.mobile — Publisher CN=Nihtip.com — SHA-256 09b0377b... — Build 2026-07-28 — Docs backup: planning/09_release_security/01_keystore_backup_and_recovery.md — Kontak: irwandip999@gmail.com</p>
         </div>
       </div>
     </section>

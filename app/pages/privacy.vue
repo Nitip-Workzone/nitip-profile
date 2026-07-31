@@ -2,7 +2,7 @@
 useHead({
   title: 'Kebijakan Privasi - Nihtip',
   meta: [
-    { name: 'description', content: 'Kebijakan Privasi Nihtip menjelaskan data yang kami kumpulkan (lokasi, kamera, kontak), tujuan penggunaan, retensi, dan hak pengguna termasuk penghapusan akun. Berlaku untuk com.codecoffy.nitip_flutter_mobile Publisher CN=Nihtip.com' },
+    { name: 'description', content: 'Kebijakan Privasi Nihtip menjelaskan data yang kami kumpulkan (lokasi, kamera, kontak), tujuan penggunaan, retensi, dan hak pengguna termasuk penghapusan akun. Berlaku untuk com.nihtip.mobile Publisher CN=Nihtip.com' },
     { property: 'og:title', content: 'Kebijakan Privasi - Nihtip' },
     { property: 'og:description', content: 'Transparansi pengelolaan data pribadi di platform Nitip - lokasi presisi, KYC, escrow, pool realtime SSE.' },
   ],
@@ -13,13 +13,13 @@ const lastUpdated = '28 Juli 2026'
 <template>
   <div class="bg-white">
     <!-- Hero -->
-    <section class="bg-gradient-to-br from-slate-900 to-slate-800 py-16">
+    <section class="bg-gradient-to-br from-slate-900 to-slate-800 pt-28 pb-16">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="inline-flex items-center gap-2 px-3 py-1 bg-white/10 rounded-full mb-4">
           <span class="text-xs font-semibold text-white/80">🔒 Transparansi Data — Data Safety Play Store</span>
         </div>
         <h1 class="text-3xl md:text-4xl font-extrabold text-white mb-3">Kebijakan Privasi</h1>
-        <p class="text-sm text-white/60">Terakhir diperbarui: {{ lastUpdated }} — Berlaku untuk aplikasi Nihtip Mobile (com.codecoffy.nitip_flutter_mobile) Publisher CN=Nihtip.com — SHA-256 09b0377b2041032a8d099c576bfafd5185a71453bc8a72e4d01dd156537fd9b7</p>
+        <p class="text-sm text-white/60">Terakhir diperbarui: {{ lastUpdated }} — Berlaku untuk aplikasi Nihtip Mobile (com.nihtip.mobile) Publisher CN=Nihtip.com — SHA-256 09b0377b2041032a8d099c576bfafd5185a71453bc8a72e4d01dd156537fd9b7</p>
       </div>
     </section>
 
@@ -27,7 +27,7 @@ const lastUpdated = '28 Juli 2026'
       <div class="mx-auto px-4 sm:px-6 lg:px-8 prose prose-slate max-w-none">
         <div class="bg-amber-50 border border-amber-200 rounded-xl p-4 mb-8">
           <p class="text-sm text-amber-800 m-0">
-            <strong>Ringkasan Play Store Data Safety:</strong> Nitip mengumpulkan lokasi presisi untuk matching order radius 15km via PostGIS ST_DWithin + Redis GEO, kamera untuk verifikasi KYC & bukti pengiriman, kontak (HP/email) untuk akun, dan riwayat pesanan. Semua data dienkripsi TLS in-transit, disimpan di PostgreSQL 16 PostGIS + Redis 7, tidak dijual ke pihak ketiga. Anda bisa minta hapus akun di <NuxtLink to="/delete-account" class="underline font-bold">halaman penghapusan akun</NuxtLink> atau email support@nihtip.com.
+            <strong>Ringkasan Play Store Data Safety:</strong> Nitip mengumpulkan lokasi presisi untuk matching order radius 15km via PostGIS ST_DWithin + Redis GEO, kamera untuk verifikasi KYC & bukti pengiriman, kontak (HP/email) untuk akun, dan riwayat pesanan. Semua data dienkripsi TLS in-transit, disimpan di PostgreSQL 16 PostGIS + Redis 7, tidak dijual ke pihak ketiga. Anda bisa minta hapus akun di <NuxtLink to="/delete-account" class="underline font-bold">halaman penghapusan akun</NuxtLink> atau email irwandip999@gmail.com.
           </p>
         </div>
 
@@ -79,7 +79,7 @@ const lastUpdated = '28 Juli 2026'
           <li>Data order &amp; transaksi: 1 tahun setelah akun dihapus untuk audit keuangan &amp; sengketa, setelah itu di-anonimize.</li>
           <li>Lokasi realtime: TTL 10 menit di Redis <code>runner:track:*</code> + <code>runner:alive:*</code>, tidak permanen di DB kecuali pickup/delivery final.</li>
           <li>Pool metrics: TTL 24h di Redis counters <code>pool:counter:*</code> + PG <code>pool_metrics</code> avg latency 1h, last_broadcast hash.</li>
-          <li>Akun: bisa minta hapus permanen via <NuxtLink to="/delete-account" class="underline font-bold">/delete-account</NuxtLink> atau email <a href="mailto:support@nihtip.com" class="underline">support@nihtip.com</a> subjek "Hapus Akun - [email]". Proses 7-30 hari, escrow pending harus settle dulu.</li>
+          <li>Akun: bisa minta hapus permanen via <NuxtLink to="/delete-account" class="underline font-bold">/delete-account</NuxtLink> atau email <a href="mailto:irwandip999@gmail.com" class="underline">irwandip999@gmail.com</a> subjek "Hapus Akun - [email]". Proses 7-30 hari, escrow pending harus settle dulu.</li>
         </ul>
 
         <h2 class="text-xl font-bold mt-10 mb-3">6. Hak Pengguna (UU PDP No.27/2022 Indonesia)</h2>
@@ -111,9 +111,10 @@ const lastUpdated = '28 Juli 2026'
         <h2 class="text-xl font-bold mt-10 mb-3">10. Kontak & Pengaduan</h2>
         <div class="bg-slate-900 text-white rounded-xl p-5 text-sm leading-relaxed">
           <p class="m-0"><strong>Organisasi:</strong> Nihtip.com — Lolak, Bolaang Mongondow, Sulawesi Utara (Platform UMKM Jastip pertama dari Kab. Bolmong)</p>
-          <p class="m-1"><strong>Email Support:</strong> <a href="mailto:support@nihtip.com" class="underline text-white">support@nihtip.com</a></p>
+          <p class="m-1"><strong>Email Support:</strong> <a href="mailto:irwandip999@gmail.com" class="underline text-white">irwandip999@gmail.com</a></p>
           <p class="m-1"><strong>Website:</strong> https://nihtip.com</p>
-          <p class="m-1"><strong>Package Name:</strong> com.codecoffy.nitip_flutter_mobile</p>
+          <p class="m-1"><strong>Package Name:</strong> com.nihtip.mobile</p>
+          <p class="m-1"><strong>Distribusi Aplikasi:</strong> Aplikasi resmi Nihtip Mobile hanya dapat diperoleh secara langsung dari Kantor Nihtip dan tidak diperkenankan untuk disebarluaskan secara bebas tanpa sepengetahuan pihak Nihtip.</p>
           <p class="m-1"><strong>Version:</strong> 1.0.0+1 (build-apk arm64 ~36MB signed v2+v3, build-aab ~22MB)</p>
           <p class="m-1"><strong>Publisher Cert:</strong> CN=Nihtip.com, OU=Mobile, O=Nihtip.com, L=Jakarta, ST=DKI Jakarta, C=ID — SHA-256: 09b0377b2041032a8d099c576bfafd5185a71453bc8a72e4d01dd156537fd9b7 — SHA-1: 1b3c5646ba8ca440e1ebd1603b1ac4b4b0d708cc</p>
           <p class="m-1"><strong>Delete Account URL:</strong> <NuxtLink to="/delete-account" class="underline text-white">https://nihtip.com/delete-account</NuxtLink></p>
