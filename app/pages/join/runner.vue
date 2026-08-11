@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
+import { useRoute } from 'vue-router'
 
 useHead({
   title: 'Pendaftaran Runner - Nihtip',
@@ -9,6 +10,13 @@ useHead({
 })
 
 const config = useRuntimeConfig()
+const route = useRoute()
+const token = ref(route.query.token as string || '')
+
+// Token validation states
+const isValidating = ref(true)
+const validationError = ref<string | null>(null)
+const tokenValid = ref(false)
 
 // Form states
 const name = ref('')
@@ -28,6 +36,29 @@ const selfiePreview = ref<string | null>(null)
 const isLoading = ref(false)
 const errorMessage = ref<string | null>(null)
 const isSuccess = ref(false)
+
+onMounted(async () => {
+  if (!token.value) {
+    validationError.value = 'Tautan pendaftaran tidak valid karena token pendaftaran tidak ditemukan.'
+    isValidating.value = false
+    return
+  }
+
+  try {
+    const res: any = await $fetch(`${config.public.nitipApiUrl}/users/invitations/validate?token=${token.value}`)
+    if (res && res.data) {
+      whatsappNumber.value = res.data.phone_number
+      tokenValid.value = true
+    } else {
+      validationError.value = 'Tautan pendaftaran tidak valid'
+    }
+  } catch (err: any) {
+    console.error('Validation error:', err)
+    validationError.value = err.data?.message || 'Tautan pendaftaran tidak valid atau sudah kedaluwarsa.'
+  } finally {
+    isValidating.value = false
+  }
+})
 
 const onIdCardChange = (e: Event) => {
   const target = e.target as HTMLInputElement
@@ -78,6 +109,7 @@ const onSubmit = async () => {
 
   try {
     const formData = new FormData()
+    formData.append('token', token.value)
     formData.append('name', name.value)
     formData.append('email', email.value)
     formData.append('password', password.value)
@@ -102,8 +134,8 @@ const onSubmit = async () => {
 </script>
 
 <template>
-  <div class="pt-[90px] pb-24 bg-gray-50/50 min-h-screen">
-    <div class="max-w-2xl mx-auto px-4">
+  <div class="pt-[90px] pb-24 bg-gray-50/50 min-h-screen flex items-center justify-center">
+    <div class="max-w-2xl mx-auto px-4 w-full">
       
       <!-- Card wrapper -->
       <div class="bg-white rounded-3xl border border-gray-100 shadow-xl shadow-gray-200/40 p-8 sm:p-10">
@@ -117,8 +149,32 @@ const onSubmit = async () => {
           <p class="text-sm text-gray-500 mt-2">Daftar sekarang untuk mulai menerima tugas belanja & pengantaran</p>
         </div>
 
+        <!-- Validating State -->
+        <div v-if="isValidating" class="text-center py-12 space-y-4">
+          <div class="w-10 h-10 border-4 border-indigo-600 border-t-transparent rounded-full animate-spin mx-auto"></div>
+          <p class="text-sm text-gray-500 font-bold">Memvalidasi token undangan Anda...</p>
+        </div>
+
+        <!-- Invalid Token Screen -->
+        <div v-else-if="validationError" class="text-center py-10 space-y-6">
+          <div class="w-16 h-16 bg-rose-50 text-rose-600 rounded-full flex items-center justify-center mx-auto text-3xl shadow-sm">
+            ⚠️
+          </div>
+          <div class="space-y-2">
+            <h2 class="text-xl font-bold text-gray-900">Undangan Tidak Valid</h2>
+            <p class="text-sm text-gray-500 max-w-md mx-auto leading-relaxed">
+              {{ validationError }}
+            </p>
+          </div>
+          <div class="pt-4">
+            <NuxtLink to="/" class="inline-flex h-[44px] px-6 rounded-[12px] bg-gray-100 hover:bg-gray-200 text-gray-700 text-[14px] font-semibold items-center justify-center transition">
+              Kembali ke Beranda
+            </NuxtLink>
+          </div>
+        </div>
+
         <!-- Success Screen -->
-        <div v-if="isSuccess" class="text-center py-10 space-y-6">
+        <div v-else-if="isSuccess" class="text-center py-10 space-y-6">
           <div class="w-16 h-16 bg-emerald-50 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-3xl shadow-sm">
             ✓
           </div>
@@ -157,15 +213,16 @@ const onSubmit = async () => {
               />
             </div>
 
-            <!-- WhatsApp -->
+            <!-- WhatsApp (Readonly locked) -->
             <div class="space-y-1.5">
               <label class="text-[12px] font-bold text-gray-700 uppercase tracking-wider">Nomor WhatsApp</label>
               <input 
                 v-model="whatsappNumber"
                 type="tel" 
                 required 
+                readonly
                 placeholder="Contoh: 0881088xxx"
-                class="w-full h-11 px-4 rounded-xl border border-gray-200 focus:outline-none focus:border-indigo-500 text-sm"
+                class="w-full h-11 px-4 rounded-xl border border-gray-200 bg-gray-50 text-gray-500 cursor-not-allowed focus:outline-none text-sm font-semibold"
               />
             </div>
 
