@@ -5,7 +5,8 @@ const isMenuOpen = ref(false)
 const navLinks = [
   { label: 'Beranda', to: '/', exact: true },
   { label: 'Cara Kerja', to: '/cara-kerja' },
-  { label: 'Layanan', to: '/fitur' },
+  { label: 'Layanan & Tarif', to: '/layanan' },
+  { label: 'Fitur', to: '/fitur' },
   { label: 'Untuk Runner', to: '/tentang' },
   { label: 'Bantuan', to: '/kontak' },
 ]

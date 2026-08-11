@@ -21,7 +21,7 @@ useSeoMeta({
 <template>
   <div class="space-y-0">
     <ProfileHero />
-    <!-- Services & old HowItWorks hidden — now integrated inside Hero per design ref screenshot 1 -->
+    <ProfileServices />
     <ProfileProblems />
     <ProfileFounderStory />
     <ProfileFeatures />
