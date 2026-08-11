@@ -39,6 +39,8 @@ const averageItemPrice = ref<number | null>(null)
 // File States
 const photoFile = ref<File | null>(null)
 const photoPreview = ref<string | null>(null)
+const coverFile = ref<File | null>(null)
+const coverPreview = ref<string | null>(null)
 
 // UI States
 const isLoading = ref(false)
@@ -79,6 +81,20 @@ const onPhotoChange = (e: Event) => {
     }
     photoFile.value = file
     photoPreview.value = URL.createObjectURL(file)
+    errorMessage.value = null
+  }
+}
+
+const onCoverChange = (e: Event) => {
+  const target = e.target as HTMLInputElement
+  if (target.files && target.files[0]) {
+    const file = target.files[0]
+    if (file.size > 5 * 1024 * 1024) {
+      errorMessage.value = 'Ukuran foto sampul tidak boleh melebihi 5MB'
+      return
+    }
+    coverFile.value = file
+    coverPreview.value = URL.createObjectURL(file)
     errorMessage.value = null
   }
 }
@@ -144,6 +160,9 @@ const onSubmit = async () => {
     formData.append('monthly_sales_range', monthlySalesRange.value)
     formData.append('average_item_price', averageItemPrice.value.toString())
     formData.append('photo', photoFile.value)
+    if (coverFile.value) {
+      formData.append('cover', coverFile.value)
+    }
 
     await $fetch(`${config.public.nitipApiUrl}/users/onboard/merchant`, {
       method: 'POST',
@@ -412,25 +431,48 @@ const onSubmit = async () => {
               </div>
             </div>
 
-            <!-- Upload Photo Toko -->
-            <div class="space-y-2">
-              <label class="text-[11px] font-bold text-gray-500 uppercase tracking-wider">Foto Fisik Tempat Usaha (Warung/Toko)</label>
-              <div class="relative border-2 border-dashed border-gray-200 rounded-2xl p-5 flex flex-col items-center justify-center hover:border-indigo-400 transition cursor-pointer bg-gray-50/50">
-                <input 
-                  type="file" 
-                  accept="image/*" 
-                  @change="onPhotoChange"
-                  class="absolute inset-0 opacity-0 cursor-pointer"
-                />
-                <template v-if="photoPreview">
-                  <img :src="photoPreview" class="h-40 w-full object-cover rounded-xl" />
-                  <p class="text-[10px] text-indigo-600 mt-2 font-bold">Ubah Foto Tempat Usaha</p>
-                </template>
-                <template v-else>
-                  <span class="text-3xl">📸</span>
-                  <p class="text-xs text-gray-500 mt-1 font-bold">Pilih foto tampak depan warung/toko asli</p>
-                  <p class="text-[9px] text-gray-400 mt-0.5">JPG/PNG maks. 5MB</p>
-                </template>
+            <!-- Upload Photo Toko & Cover -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <div class="space-y-2">
+                <label class="text-[11px] font-bold text-gray-500 uppercase tracking-wider">Foto Fisik Tempat Usaha (Warung/Toko)</label>
+                <div class="relative border-2 border-dashed border-gray-200 rounded-2xl p-5 flex flex-col items-center justify-center hover:border-indigo-400 transition cursor-pointer bg-gray-50/50 min-h-[160px]">
+                  <input 
+                    type="file" 
+                    accept="image/*" 
+                    @change="onPhotoChange"
+                    class="absolute inset-0 opacity-0 cursor-pointer"
+                  />
+                  <template v-if="photoPreview">
+                    <img :src="photoPreview" class="h-28 w-full object-cover rounded-xl" />
+                    <p class="text-[10px] text-indigo-600 mt-2 font-bold">Ubah Foto Tempat Usaha</p>
+                  </template>
+                  <template v-else>
+                    <span class="text-3xl">📸</span>
+                    <p class="text-xs text-gray-500 mt-1 font-bold">Pilih foto tampak depan warung/toko asli</p>
+                    <p class="text-[9px] text-gray-400 mt-0.5">JPG/PNG maks. 5MB</p>
+                  </template>
+                </div>
+              </div>
+
+              <div class="space-y-2">
+                <label class="text-[11px] font-bold text-gray-500 uppercase tracking-wider">Foto Sampul Toko / Banner (Opsional)</label>
+                <div class="relative border-2 border-dashed border-gray-200 rounded-2xl p-5 flex flex-col items-center justify-center hover:border-indigo-400 transition cursor-pointer bg-gray-50/50 min-h-[160px]">
+                  <input 
+                    type="file" 
+                    accept="image/*" 
+                    @change="onCoverChange"
+                    class="absolute inset-0 opacity-0 cursor-pointer"
+                  />
+                  <template v-if="coverPreview">
+                    <img :src="coverPreview" class="h-28 w-full object-cover rounded-xl" />
+                    <p class="text-[10px] text-indigo-600 mt-2 font-bold">Ubah Foto Sampul</p>
+                  </template>
+                  <template v-else>
+                    <span class="text-3xl">🖼️</span>
+                    <p class="text-xs text-gray-500 mt-1 font-bold">Pilih foto sampul halaman toko Anda</p>
+                    <p class="text-[9px] text-gray-400 mt-0.5">JPG/PNG maks. 5MB</p>
+                  </template>
+                </div>
               </div>
             </div>
           </div>

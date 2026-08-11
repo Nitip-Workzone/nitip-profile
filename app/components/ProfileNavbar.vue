@@ -47,8 +47,7 @@ const navLinks = [
         <!-- Right Actions -->
         <div class="hidden lg:flex items-center gap-2.5">
           <a
-            href="https://wa.me/628810880293990"
-            target="_blank" rel="noopener noreferrer"
+            href="https://web.nihtip.com"
             class="px-[18px] py-[8px] text-[13px] font-semibold text-gray-700 bg-white border border-gray-200 rounded-[10px] hover:bg-gray-50 transition-colors"
           >
             Masuk
@@ -96,7 +95,7 @@ const navLinks = [
               {{ link.label }}
             </NuxtLink>
             <div class="flex gap-2 pt-3">
-              <a href="https://wa.me/628810880293990" target="_blank" rel="noopener noreferrer" class="flex-1 text-center px-4 py-2.5 text-sm font-semibold border border-gray-200 rounded-xl">Masuk</a>
+              <a href="https://web.nihtip.com" class="flex-1 text-center px-4 py-2.5 text-sm font-semibold border border-gray-200 rounded-xl">Masuk</a>
               <a href="https://wa.me/628810880293990" target="_blank" rel="noopener noreferrer" class="flex-1 text-center px-4 py-2.5 text-sm font-semibold text-white bg-primary-600 rounded-xl">Daftar Gratis</a>
             </div>
           </div>
