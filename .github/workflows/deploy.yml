@@ -13,6 +13,11 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      - name: Copy Secrets File
+        run: |
+          # Menyalin berkas environment untuk proses build
+          cp ~/.secret/nitip-profile-production.env .env
+
       - name: Build New Docker Image
         run: |
           # Build ulang image dengan tag latest (menarik source code terbaru)
@@ -23,7 +28,9 @@ jobs:
           # Restart container dengan image terbaru
           docker compose up -d
           
-      - name: Cleanup Old Images
+      - name: Cleanup Secrets & Images
         run: |
+          # Hapus berkas .env dari runner untuk keamanan
+          rm -f .env || true
           # Menghapus sisa image lama agar disk VPS tidak cepat penuh
           docker image prune -f

@@ -1,6 +1,13 @@
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
   devtools: { enabled: false },
+  
+  runtimeConfig: {
+    public: {
+      // @ts-ignore
+      nitipApiUrl: process.env.NUXT_PUBLIC_NITIP_API_URL || process.env.API_BASE_URL || 'http://localhost:8000/api/v1',
+    },
+  },
 
   // SSR wajib aktif agar halaman bisa di-crawl Google
   ssr: true,

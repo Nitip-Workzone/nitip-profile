@@ -10,6 +10,7 @@ services:
       PORT: 3000
       HOST: 0.0.0.0
       NUXT_DEVTOOLS: "false"
+      NUXT_PUBLIC_NITIP_API_URL: ${NUXT_PUBLIC_NITIP_API_URL}
     ports:
       - "127.0.0.1:3000:3000"
     deploy:
