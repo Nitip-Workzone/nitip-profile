@@ -182,6 +182,126 @@ const services: Service[] = [
           <strong class="text-gray-700">Semua tarif dalam Rupiah Indonesia (IDR)</strong> dan dihitung otomatis oleh sistem berdasarkan jarak tempuh, berat, dan volume barang. Biaya layanan platform 10% sudah termasuk dalam tarif yang ditampilkan. Pembayaran dapat dilakukan melalui <strong class="text-gray-700">Saldo Nitip Pay atau QRIS</strong>.
         </p>
       </div>
+
+      <!-- Regulasi Pencairan Dana -->
+      <div class="mt-6 max-w-4xl mx-auto">
+        <div class="text-center mb-6">
+          <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 border border-emerald-100 text-[11px] font-bold text-emerald-600 uppercase tracking-widest">
+            Regulasi Pencairan Dana
+          </span>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <!-- Runner / Merchant -->
+          <div class="bg-white rounded-2xl border border-indigo-100 p-6 shadow-sm">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-xl bg-indigo-50 flex items-center justify-center text-xl flex-shrink-0">
+                🏪
+              </div>
+              <div>
+                <p class="text-[10px] font-bold text-indigo-500 uppercase tracking-wider">Untuk Runner / Merchant</p>
+                <h3 class="text-sm font-extrabold text-gray-900">Pencairan Terjadwal Harian</h3>
+              </div>
+            </div>
+            <div class="space-y-3">
+              <div class="flex items-start gap-2.5">
+                <div class="w-5 h-5 rounded-full bg-indigo-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-3 h-3 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <p class="text-xs text-gray-600 leading-relaxed">
+                  Saldo hasil pesanan dapat dicairkan <strong class="text-gray-800">setiap hari pukul 21.00 WIB</strong> ke rekening bank atau e-wallet terdaftar.
+                </p>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <div class="w-5 h-5 rounded-full bg-indigo-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-3 h-3 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <p class="text-xs text-gray-600 leading-relaxed">
+                  Proses pencairan <strong class="text-gray-800">dieksekusi otomatis</strong> oleh sistem setiap malam — tanpa perlu request manual.
+                </p>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <div class="w-5 h-5 rounded-full bg-indigo-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-3 h-3 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <p class="text-xs text-gray-600 leading-relaxed">
+                  Dana yang belum diklaim hari itu akan diakumulasikan dan dicairkan pada jadwal berikutnya.
+                </p>
+              </div>
+              <div class="mt-3 pt-3 border-t border-indigo-50 flex items-center gap-2">
+                <span class="text-base">🕘</span>
+                <p class="text-[11px] font-bold text-indigo-600">Jadwal: Setiap hari, 21.00 WIB</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- User / Customer -->
+          <div class="bg-white rounded-2xl border border-emerald-100 p-6 shadow-sm">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center text-xl flex-shrink-0">
+                👤
+              </div>
+              <div>
+                <p class="text-[10px] font-bold text-emerald-500 uppercase tracking-wider">Untuk Pengguna / Customer</p>
+                <h3 class="text-sm font-extrabold text-gray-900">Pencairan Instan</h3>
+              </div>
+            </div>
+            <div class="space-y-3">
+              <div class="flex items-start gap-2.5">
+                <div class="w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-3 h-3 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <p class="text-xs text-gray-600 leading-relaxed">
+                  Pengguna dapat melakukan <strong class="text-gray-800">pencairan saldo instan</strong> kapan saja ke rekening bank atau dompet digital pilihan.
+                </p>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <div class="w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-3 h-3 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <p class="text-xs text-gray-600 leading-relaxed">
+                  Biaya transfer mengikuti <strong class="text-gray-800">kebijakan masing-masing bank atau e-wallet</strong> tujuan (contoh: Rp 2.500–Rp 6.500 untuk transfer antar bank).
+                </p>
+              </div>
+              <div class="flex items-start gap-2.5">
+                <div class="w-5 h-5 rounded-full bg-emerald-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <svg class="w-3 h-3 text-emerald-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <p class="text-xs text-gray-600 leading-relaxed">
+                  Tidak ada biaya tambahan dari Nihtip — potongan hanya dari penyedia layanan transfer yang dipilih.
+                </p>
+              </div>
+              <div class="mt-3 pt-3 border-t border-emerald-50 flex items-center gap-2">
+                <span class="text-base">⚡</span>
+                <p class="text-[11px] font-bold text-emerald-600">Proses: Instan (sesuai SLA bank/e-wallet)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom note -->
+        <div class="mt-4 bg-gray-50 rounded-xl border border-gray-100 px-5 py-3.5 flex items-start gap-2.5">
+          <svg class="w-4 h-4 text-gray-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+          <p class="text-[11px] text-gray-500 leading-relaxed">
+            Semua pencairan dana tunduk pada regulasi Bank Indonesia dan ketentuan penyedia layanan pembayaran. Nihtip berkomitmen untuk memastikan keamanan dan transparansi setiap transaksi keuangan dalam platform.
+          </p>
+        </div>
+      </div>
     </div>
   </section>
 </template>
+
