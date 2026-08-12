@@ -85,7 +85,7 @@ export default defineNuxtConfig({
   nitro: {
     // Prerender halaman statis untuk SEO
     prerender: {
-      routes: ['/', '/tentang', '/cara-kerja', '/fitur', '/kontak', '/privacy', '/terms'],
+      routes: ['/', '/tentang', '/cara-kerja', '/fitur', '/kontak', '/privacy', '/terms', '/guide', '/guide/merchant'],
     },
   },
 

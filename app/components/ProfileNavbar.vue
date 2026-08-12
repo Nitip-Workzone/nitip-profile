@@ -8,6 +8,7 @@ const navLinks = [
   { label: 'Layanan & Tarif', to: '/layanan' },
   { label: 'Fitur', to: '/fitur' },
   { label: 'Untuk Runner', to: '/tentang' },
+  { label: 'Panduan', to: '/guide' },
   { label: 'Bantuan', to: '/kontak' },
 ]
 </script>
