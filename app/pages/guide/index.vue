@@ -6,6 +6,10 @@ useHead({
   ],
 })
 
+definePageMeta({
+  layout: false
+})
+
 const roles = [
   {
     id: 'nihtip',

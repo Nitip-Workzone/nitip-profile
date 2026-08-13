@@ -9,6 +9,10 @@ useHead({
 })
 
 // Tab navigasi utama
+definePageMeta({
+  layout: false
+})
+
 const activeTab = ref('umum')
 const activeSubSection = ref('')
 
