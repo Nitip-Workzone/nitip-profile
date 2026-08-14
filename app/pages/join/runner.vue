@@ -249,6 +249,24 @@ const onSubmit = async () => {
             <!-- Selfie File -->
             <div class="space-y-2">
               <label class="text-[12px] font-bold text-gray-700 uppercase tracking-wider">Foto Selfie dengan KTP</label>
+
+              <!-- Selfie with KTP Guide Illustration -->
+              <div class="p-4 bg-indigo-50/50 border border-indigo-100/80 rounded-2xl flex flex-col sm:flex-row items-center gap-4 mb-3">
+                <img 
+                  src="/images/selfie_ktp_instruction.png" 
+                  alt="Panduan Selfie KTP" 
+                  class="w-28 h-28 object-cover rounded-xl border border-indigo-100 shadow-sm flex-shrink-0"
+                />
+                <div class="text-left space-y-1">
+                  <p class="text-xs font-extrabold text-indigo-900">Panduan Foto Selfie:</p>
+                  <ul class="text-[10px] text-indigo-800 list-disc list-inside space-y-1 leading-relaxed">
+                    <li>Pegang KTP asli Anda di dekat wajah/bawah dagu.</li>
+                    <li>Pastikan wajah Anda & seluruh info/tulisan pada KTP terbaca jelas.</li>
+                    <li>Hindari foto yang buram, gelap, atau terpotong.</li>
+                  </ul>
+                </div>
+              </div>
+
               <div class="relative border-2 border-dashed border-gray-200 rounded-2xl p-4 flex flex-col items-center justify-center hover:border-indigo-400 transition cursor-pointer bg-gray-50/50">
                 <input 
                   type="file" 
