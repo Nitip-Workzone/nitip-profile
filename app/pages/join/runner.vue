@@ -89,13 +89,8 @@ const onSelfieChange = (e: Event) => {
 }
 
 const onSubmit = async () => {
-  if (idCardNumber.value.length !== 16) {
-    errorMessage.value = 'Nomor KTP harus terdiri dari 16 digit angka'
-    return
-  }
-
-  if (!idCardFile.value || !selfieFile.value) {
-    errorMessage.value = 'Harap unggah seluruh dokumen persyaratan'
+  if (!selfieFile.value) {
+    errorMessage.value = 'Harap unggah foto selfie dengan KTP Anda'
     return
   }
 
@@ -114,8 +109,6 @@ const onSubmit = async () => {
     formData.append('email', email.value)
     formData.append('password', password.value)
     formData.append('whatsapp_number', whatsappNumber.value)
-    formData.append('id_card_number', idCardNumber.value)
-    formData.append('id_card', idCardFile.value)
     formData.append('selfie', selfieFile.value)
 
     const response = await $fetch(`${config.public.nitipApiUrl}/users/onboard/runner`, {
@@ -251,43 +244,8 @@ const onSubmit = async () => {
             </div>
           </div>
 
-          <!-- KTP Number -->
-          <div class="space-y-1.5">
-            <label class="text-[12px] font-bold text-gray-700 uppercase tracking-wider">Nomor KTP (NIK)</label>
-            <input 
-              v-model="idCardNumber"
-              type="text" 
-              required 
-              maxlength="16"
-              placeholder="16 Digit Nomor Induk Kependudukan"
-              class="w-full h-11 px-4 rounded-xl border border-gray-200 focus:outline-none focus:border-indigo-500 text-sm"
-            />
-          </div>
-
           <!-- Upload Dokumen Section -->
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-5 pt-2">
-            <!-- KTP File -->
-            <div class="space-y-2">
-              <label class="text-[12px] font-bold text-gray-700 uppercase tracking-wider">Foto KTP Asli</label>
-              <div class="relative border-2 border-dashed border-gray-200 rounded-2xl p-4 flex flex-col items-center justify-center hover:border-indigo-400 transition cursor-pointer bg-gray-50/50">
-                <input 
-                  type="file" 
-                  accept="image/*" 
-                  @change="onIdCardChange"
-                  class="absolute inset-0 opacity-0 cursor-pointer"
-                />
-                <template v-if="idCardPreview">
-                  <img :src="idCardPreview" class="h-24 w-full object-cover rounded-xl" />
-                  <p class="text-[10px] text-indigo-600 mt-2 font-bold">Ubah Foto KTP</p>
-                </template>
-                <template v-else>
-                  <span class="text-2xl">🪪</span>
-                  <p class="text-xs text-gray-500 mt-1 font-bold">Pilih berkas KTP</p>
-                  <p class="text-[9px] text-gray-400 mt-0.5">JPG/PNG maks. 5MB</p>
-                </template>
-              </div>
-            </div>
-
+          <div class="pt-2">
             <!-- Selfie File -->
             <div class="space-y-2">
               <label class="text-[12px] font-bold text-gray-700 uppercase tracking-wider">Foto Selfie dengan KTP</label>
