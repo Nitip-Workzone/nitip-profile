@@ -33,7 +33,7 @@ const showAlert = () => {
         <!-- Buttons group -->
         <div class="relative flex flex-col sm:flex-row gap-4 justify-center items-center pt-4">
           <a
-            href="https://wa.me/62881090293990"
+            href="https://wa.me/628810990293990?text=Halo%20Admin%20Nihtip%2C%20saya%20tertarik%20untuk%20mendaftar%20di%20Nihtip"
             target="_blank" rel="noopener noreferrer"
             class="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-8 py-4 text-sm font-bold text-primary-950 bg-white hover:bg-gray-100 active:scale-95 rounded-2xl transition-all duration-300 shadow-xl shadow-black/10"
           >

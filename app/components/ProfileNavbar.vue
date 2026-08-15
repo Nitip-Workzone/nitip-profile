@@ -54,7 +54,7 @@ const navLinks = [
             Masuk
           </a>
           <a
-            href="https://wa.me/62881090293990"
+            href="https://wa.me/628810990293990?text=Halo%20Admin%20Nihtip%2C%20saya%20ingin%20mendaftar%20di%20Nihtip"
             target="_blank" rel="noopener noreferrer"
             class="px-[18px] py-[8px] text-[13px] font-semibold text-white bg-primary-600 rounded-[10px] hover:bg-primary-700 transition-colors shadow-sm shadow-primary-600/20"
           >
@@ -97,7 +97,7 @@ const navLinks = [
             </NuxtLink>
             <div class="flex gap-2 pt-3">
               <a href="https://web.nihtip.com" class="flex-1 text-center px-4 py-2.5 text-sm font-semibold border border-gray-200 rounded-xl">Masuk</a>
-              <a href="https://wa.me/62881090293990" target="_blank" rel="noopener noreferrer" class="flex-1 text-center px-4 py-2.5 text-sm font-semibold text-white bg-primary-600 rounded-xl">Daftar Gratis</a>
+              <a href="https://wa.me/628810990293990?text=Halo%20Admin%20Nihtip%2C%20saya%20ingin%20mendaftar%20di%20Nihtip" target="_blank" rel="noopener noreferrer" class="flex-1 text-center px-4 py-2.5 text-sm font-semibold text-white bg-primary-600 rounded-xl">Daftar Gratis</a>
             </div>
           </div>
         </div>

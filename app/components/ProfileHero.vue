@@ -29,7 +29,7 @@
               <span>Nitip Jo</span>
               <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
             </a>
-            <a href="https://wa.me/62881090293990" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 h-[44px] px-5 rounded-[12px] bg-white border border-[#e2e8f0] text-[#334155] text-[14px] font-semibold hover:bg-[#f8fafc] transition active:scale-[0.98]">
+            <a href="https://wa.me/628810990293990?text=Halo%20Admin%20Nihtip%2C%20saya%20ingin%20mendaftar%20sebagai%20Runner%20Nihtip" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center gap-2 h-[44px] px-5 rounded-[12px] bg-white border border-[#e2e8f0] text-[#334155] text-[14px] font-semibold hover:bg-[#f8fafc] transition active:scale-[0.98]">
               <span>Jadi Runner</span>
               <span class="text-[16px] leading-none">🚲</span>
             </a>

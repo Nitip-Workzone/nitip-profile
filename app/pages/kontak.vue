@@ -55,7 +55,7 @@ function handleSubmit() {
                   </div>
                   <div>
                     <h3 class="font-semibold text-gray-900">WhatsApp</h3>
-                    <p class="text-gray-500"><a href="https://wa.me/62881090293990" target="_blank" rel="noopener noreferrer" class="hover:underline">+62 881-0902-93990</a></p>
+                    <p class="text-gray-500"><a href="https://wa.me/628810990293990" target="_blank" rel="noopener noreferrer" class="hover:underline">+62 881-0990-2939-90</a></p>
                   </div>
                 </div>
                 <div class="flex items-start gap-4">

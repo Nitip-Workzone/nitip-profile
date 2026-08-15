@@ -119,7 +119,7 @@ const lastUpdated = '31 Juli 2026'
           <p class="m-2">Silakan hubungi layanan pengaduan dan bantuan operasional kami di:</p>
           <ul class="list-disc pl-5 mt-2 space-y-1 text-slate-300">
             <li><strong>Email Dukungan:</strong> <a href="mailto:irwandip999@gmail.com" class="underline text-white hover:text-primary-300">irwandip999@gmail.com</a></li>
-            <li><strong>WhatsApp Business:</strong> <a href="https://wa.me/62881090293990" target="_blank" rel="noopener noreferrer" class="underline text-white hover:text-primary-300">+62 881-0902-93990</a></li>
+            <li><strong>WhatsApp Business:</strong> <a href="https://wa.me/628810990293990" target="_blank" rel="noopener noreferrer" class="underline text-white hover:text-primary-300">+62 881-0990-2939-90</a></li>
             <li><strong>Organisasi:</strong> Nihtip.com — Lolak, Bolaang Mongondow, Sulawesi Utara, Indonesia.</li>
           </ul>
         </div>
