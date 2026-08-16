@@ -11,12 +11,44 @@ useHead({
 
 const config = useRuntimeConfig()
 const route = useRoute()
-const token = ref(route.query.token as string || '')
+const rawToken = route.query.token as string || ''
+const token = ref(rawToken.trim())
 
 // Token validation states
 const isValidating = ref(true)
 const validationError = ref<string | null>(null)
 const tokenValid = ref(false)
+
+async function compressImageFile(file: File): Promise<File> {
+  return new Promise<File>((resolve) => {
+    const img = new Image()
+    img.onload = () => {
+      const maxDim = 1200
+      let { width, height } = img
+      if (width > maxDim || height > maxDim) {
+        if (width > height) {
+          height = Math.round((height * maxDim) / width)
+          width = maxDim
+        } else {
+          width = Math.round((width * maxDim) / height)
+          height = maxDim
+        }
+      }
+      const canvas = document.createElement('canvas')
+      canvas.width = width; canvas.height = height
+      const ctx = canvas.getContext('2d')
+      if (!ctx) { resolve(file); return }
+      ctx.drawImage(img, 0, 0, width, height)
+      canvas.toBlob((blob) => {
+        if (!blob) { resolve(file); return }
+        const newName = file.name.replace(/\.\w+$/, '.jpg')
+        resolve(new File([blob], newName, { type: 'image/jpeg' }))
+      }, 'image/jpeg', 0.75)
+    }
+    img.onerror = () => resolve(file)
+    img.src = URL.createObjectURL(file)
+  })
+}
 
 // Owner Account States
 const name = ref('')
@@ -71,28 +103,30 @@ onMounted(async () => {
   }
 })
 
-const onPhotoChange = (e: Event) => {
+const onPhotoChange = async (e: Event) => {
   const target = e.target as HTMLInputElement
   if (target.files && target.files[0]) {
-    const file = target.files[0]
-    if (file.size > 5 * 1024 * 1024) {
-      errorMessage.value = 'Ukuran foto tempat usaha tidak boleh melebihi 5MB'
+    let file = target.files[0]
+    if (file.size > 20 * 1024 * 1024) {
+      errorMessage.value = 'Ukuran foto tempat usaha terlalu besar (>20MB)'
       return
     }
+    try { file = await compressImageFile(file) } catch {}
     photoFile.value = file
     photoPreview.value = URL.createObjectURL(file)
     errorMessage.value = null
   }
 }
 
-const onCoverChange = (e: Event) => {
+const onCoverChange = async (e: Event) => {
   const target = e.target as HTMLInputElement
   if (target.files && target.files[0]) {
-    const file = target.files[0]
-    if (file.size > 5 * 1024 * 1024) {
-      errorMessage.value = 'Ukuran foto sampul tidak boleh melebihi 5MB'
+    let file = target.files[0]
+    if (file.size > 20 * 1024 * 1024) {
+      errorMessage.value = 'Ukuran foto sampul terlalu besar (>20MB)'
       return
     }
+    try { file = await compressImageFile(file) } catch {}
     coverFile.value = file
     coverPreview.value = URL.createObjectURL(file)
     errorMessage.value = null
@@ -144,14 +178,24 @@ const onSubmit = async () => {
   isLoading.value = true
   errorMessage.value = null
 
+  // Client validation to prevent generic validation failed
+  if (email.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+    errorMessage.value = 'Format email tidak valid, periksa spasi di akhir'
+    return
+  }
+  if (password.value && password.value.length < 8) {
+    errorMessage.value = 'Password minimal 8 karakter (saat ini ' + password.value.length + ')'
+    return
+  }
+
   try {
     const formData = new FormData()
-    formData.append('token', token.value)
-    formData.append('name', name.value)
-    formData.append('email', email.value)
+    formData.append('token', token.value.trim())
+    formData.append('name', name.value.trim())
+    formData.append('email', email.value.trim().toLowerCase())
     formData.append('password', password.value)
     formData.append('whatsapp_number', whatsappNumber.value)
-    formData.append('merchant_name', merchantName.value)
+    formData.append('merchant_name', merchantName.value.trim())
     formData.append('description', description.value)
     formData.append('address', address.value)
     formData.append('latitude', latitude.value.toString())
@@ -172,7 +216,8 @@ const onSubmit = async () => {
     isSuccess.value = true
   } catch (err: any) {
     console.error('Merchant onboarding failed:', err)
-    errorMessage.value = err.data?.message || 'Terjadi kesalahan sistem saat mendaftar merchant'
+    const detail = err.data?.errors?.map((e: any) => `${e.field}: ${e.message}`).join(', ')
+    errorMessage.value = detail || err.data?.message || err.message || 'Terjadi kesalahan sistem saat mendaftar merchant'
   } finally {
     isLoading.value = false
   }
