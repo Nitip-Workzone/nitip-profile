@@ -5,42 +5,27 @@ on:
     branches:
       - main
 
-concurrency:
-  group: deploy-nitip-profile
-  cancel-in-progress: false
-
 jobs:
   deploy:
     runs-on: nitip-prod
-    
+
     steps:
-      - name: Checkout Code (retry for 429)
-        uses: Wandalen/wretry.action@v3
-        with:
-          attempt_limit: 5
-          attempt_delay: 10000
-          action: actions/checkout@v4
-          with: |
-            fetch-depth: 1
+      - name: Checkout Code
+        uses: actions/checkout@v4
 
       - name: Copy Secrets File
         run: |
-          # Menyalin berkas environment untuk proses build
           cp ~/.secret/nitip-profile-production.env .env
 
       - name: Build New Docker Image
         run: |
-          # Build ulang image dengan tag latest (menarik source code terbaru)
           docker compose build app
 
       - name: Restart Container
         run: |
-          # Restart container dengan image terbaru
           docker compose up -d
-          
+
       - name: Cleanup Secrets & Images
         run: |
-          # Hapus berkas .env dari runner untuk keamanan
           rm -f .env || true
-          # Menghapus sisa image lama agar disk VPS tidak cepat penuh
           docker image prune -f
