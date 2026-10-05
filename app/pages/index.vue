@@ -1,20 +1,24 @@
 <script setup lang="ts">
 useHead({
-  title: 'Nihtip - Kirim & Titip Barang Lebih Mudah',
+  htmlAttrs: { lang: 'id' },
+  link: [{ rel: 'canonical', href: 'https://nitip.id/' }],
+  title: 'Nihtip - Jasa Titip & Kirim Barang Bolaang Mongondow | UMKM Lolak',
   meta: [
     {
       name: 'description',
-      content: 'Nitip menghubungkan kebutuhanmu dengan Runner terpercaya yang memang sedang dalam perjalanan. Lebih hemat waktu, lebih aman, tanpa merepotkan teman.',
+      content: 'Jasa Titip (Jastip) pertama dari Lolak, Bolaang Mongondow. Titip belanja, kirim paket, escrow aman. Daftar Runner via WhatsApp. Lolak/Bolang Mongondow, Sulawesi Utara.',
     },
+    { name: 'robots', content: 'index, follow' },
   ],
 })
 
 useSeoMeta({
-  title: 'Nihtip - Kirim & Titip Barang Lebih Mudah',
-  description: 'Nitip menghubungkan kebutuhanmu dengan Runner terpercaya yang memang sedang dalam perjalanan. Lebih hemat waktu, lebih aman, tanpa merepotkan teman.',
-  ogTitle: 'Nihtip - Kirim & Titip Barang Lebih Mudah',
-  ogDescription: 'Nitip menghubungkan kebutuhanmu dengan Runner terpercaya yang memang sedang dalam perjalanan.',
+  title: 'Nihtip - Jasa Titip & Kirim Barang Bolaang Mongondow | UMKM Lolak',
+  description: 'Jasa Titip pertama dari Lolak, Bolaang Mongondow. Titip belanja, kirim paket, escrow aman.',
+  ogTitle: 'Nihtip - Jasa Titip & Kirim Barang Bolaang Mongondow',
+  ogDescription: 'UMKM Jastip dari Lolak untuk Bolaang Mongondow & Sulawesi Utara. Escrow aman, Runner terverifikasi.',
   ogType: 'website',
+  ogUrl: 'https://nitip.id/',
 })
 </script>
 
