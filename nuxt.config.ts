@@ -94,13 +94,11 @@ export default defineNuxtConfig({
       failOnError: false,
     },
   },
-  site: {
-    url: 'https://nitip.id',
-    name: 'Nihtip',
-  },
+  // @ts-ignore — augmented by @nuxtjs/sitemap (types generated in .nuxt after `nuxt prepare`)
   sitemap: {
+    siteUrl: 'https://nitip.id',
     xsl: false,
-  },
+  } as any,
 
   future: {
     compatibilityVersion: 4,
