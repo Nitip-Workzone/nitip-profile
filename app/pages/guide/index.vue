@@ -16,8 +16,8 @@ const roles = [
     title: 'Penitip (Nihtip)',
     desc: 'Panduan lengkap cara memesan makanan (Nitip Food), titip belanja instan, melacak pesanan, hingga melakukan pembayaran aman.',
     icon: '📱',
-    badge: 'Aktif',
-    to: '/guide/nihtip', // will be fully added later
+    badge: 'Segera',
+    to: '/guide/penitip',
     color: 'border-blue-100 hover:border-blue-200 bg-blue-50/10'
   },
   {

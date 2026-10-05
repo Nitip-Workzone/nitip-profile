@@ -88,6 +88,7 @@ export default defineNuxtConfig({
     prerender: {
       crawlLinks: true,
       routes: ['/', '/tentang', '/cara-kerja', '/fitur', '/kontak', '/privacy', '/terms', '/guide', '/guide/merchant', '/guide/runner', '/layanan', '/delete-account', '/join/runner', '/join/merchant'],
+      ignore: ['/guide/nihtip'],
     },
   },
   site: {
