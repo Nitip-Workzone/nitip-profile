@@ -20,33 +20,33 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: { lang: 'id' },
-      title: 'Nihtip - Kirim & Titip Barang Lebih Mudah',
+      title: 'Nitip — Platform Nitip Kirim Titip Barang | Jasa Titip Terpercaya',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { name: 'keywords', content: 'nitip, nitip kirim, jasa titip, nitip barang, jastip bolmong, titip barang lolak, kirim barang sulut, nihtip' },
         {
           name: 'description',
           content:
-            'Platform Jastip UMKM dari Lolak, Bolang Mongondow. Kirim & titip barang aman via escrow, tracking real-time. Jasa Titip Bolaang Mongondow.',
+            'Nitip (Nihtip) — Platform Jasa Titip. Nitip kirim & titip barang aman via escrow, Runner terverifikasi. Cari nitip? Nitip di sini. UMKM Lolak, Bolaang Mongondow.',
         },
         // Open Graph
         { property: 'og:type', content: 'website' },
-        { property: 'og:title', content: 'Nihtip - Kirim & Titip Barang Lebih Mudah' },
+        { property: 'og:title', content: 'Nitip — Platform Nitip Kirim Titip Barang' },
         {
           property: 'og:description',
           content:
-            'Platform Jasa Titip yang menghubungkan Penitip dan Runner. Kirim barang lebih mudah, aman, dan terjangkau.',
+            'Nitip adalah platform nitip — jasa titip kirim barang aman via escrow. Nitip barang apa saja, Runner terverifikasi.',
         },
         { property: 'og:image', content: '/og-image.png' },
         { property: 'og:site_name', content: 'Nihtip' },
         { property: 'og:locale', content: 'id_ID' },
         // Twitter Card
         { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:title', content: 'Nihtip - Kirim & Titip Barang Lebih Mudah' },
+        { name: 'twitter:title', content: 'Nitip — Platform Nitip Kirim Titip Barang' },
         {
           name: 'twitter:description',
-          content:
-            'Platform Jasa Titip yang menghubungkan Penitip dan Runner.',
+          content: 'Nitip: jasa titip kirim barang — nitip apa saja, Runner terverifikasi.',
         },
         { name: 'twitter:image', content: '/og-image.png' },
         // Theme
@@ -68,15 +68,17 @@ export default defineNuxtConfig({
           innerHTML: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Organization',
-            name: 'Nihtip',
+            name: 'Nitip',
+            alternateName: ['Nihtip', 'Nitip.id'],
             url: 'https://nitip.id',
             logo: 'https://nitip.id/logo.webp',
             description:
-              'Platform Jasa Titip yang menghubungkan Penitip dan Runner untuk pengiriman barang yang lebih mudah dan aman.',
+              'Nitip (Nihtip) — Platform Jasa Titip. Nitip kirim & titip barang aman via escrow. Brand nitip, bukan kata nitip slang.',
             sameAs: [
               'https://www.instagram.com/nitip.id',
               'https://www.tiktok.com/@nitip.id',
             ],
+            keywords: 'nitip, nitip kirim, jasa titip, nitip barang',
           }),
         },
       ],
