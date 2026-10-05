@@ -14,6 +14,7 @@ export default defineNuxtConfig({
 
   modules: [
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/sitemap',
   ],
 
   app: {
@@ -23,13 +24,10 @@ export default defineNuxtConfig({
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { 'http-equiv': 'Cache-Control', content: 'no-cache, no-store, must-revalidate' },
-        { 'http-equiv': 'Pragma', content: 'no-cache' },
-        { 'http-equiv': 'Expires', content: '0' },
         {
           name: 'description',
           content:
-            'Nitip menghubungkan Penitip dan Runner. Kirim & titip barang lebih mudah, aman dengan sistem escrow, dan real-time tracking. Download sekarang!',
+            'Platform Jastip UMKM dari Lolak, Bolang Mongondow. Kirim & titip barang aman via escrow, tracking real-time. Jasa Titip Bolaang Mongondow.',
         },
         // Open Graph
         { property: 'og:type', content: 'website' },
@@ -86,20 +84,18 @@ export default defineNuxtConfig({
   },
 
   nitro: {
-    // Prerender halaman statis untuk SEO
+    // Prerender semua halaman statis agar Google bisa crawl tanpa JS
     prerender: {
-      routes: ['/', '/tentang', '/cara-kerja', '/fitur', '/kontak', '/privacy', '/terms', '/guide', '/guide/merchant', '/guide/runner'],
+      crawlLinks: true,
+      routes: ['/', '/tentang', '/cara-kerja', '/fitur', '/kontak', '/privacy', '/terms', '/guide', '/guide/merchant', '/guide/runner', '/layanan', '/delete-account', '/join/runner', '/join/merchant'],
     },
-    routeRules: {
-      '/': { headers: { 'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate', 'Pragma': 'no-cache', 'Expires': '0' } },
-      '/tentang': { headers: { 'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate', 'Pragma': 'no-cache', 'Expires': '0' } },
-      '/cara-kerja': { headers: { 'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate', 'Pragma': 'no-cache', 'Expires': '0' } },
-      '/fitur': { headers: { 'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate', 'Pragma': 'no-cache', 'Expires': '0' } },
-      '/kontak': { headers: { 'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate', 'Pragma': 'no-cache', 'Expires': '0' } },
-      '/privacy': { headers: { 'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate', 'Pragma': 'no-cache', 'Expires': '0' } },
-      '/terms': { headers: { 'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate', 'Pragma': 'no-cache', 'Expires': '0' } },
-      '/guide/**': { headers: { 'Cache-Control': 'no-store, no-cache, must-revalidate, proxy-revalidate', 'Pragma': 'no-cache', 'Expires': '0' } },
-    },
+  },
+  site: {
+    url: 'https://nitip.id',
+    name: 'Nihtip',
+  },
+  sitemap: {
+    xsl: false,
   },
 
   future: {
