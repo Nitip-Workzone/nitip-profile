@@ -1,11 +1,11 @@
 # Stage 1: Build
-FROM node:22-alpine AS builder
+FROM oven/bun:1.4.4 AS builder
 
 WORKDIR /app
 
-# Copy package files and install dependencies (npm only)
-COPY package.json package-lock.json* ./
-RUN npm ci || npm install
+# Copy package files and install dependencies (bun)
+COPY package.json bun.lock bunfig.toml ./
+RUN bun install
 
 # Copy source code
 COPY . .
@@ -14,7 +14,7 @@ COPY . .
 ENV NUXT_DEVTOOLS=false
 
 # Build Nuxt for production (SSR)
-RUN npm run build
+RUN bun run build
 
 # Stage 2: Runtime
 FROM node:22-alpine
